@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{% include canonical-meta.html %}
+	<title>{{ page.title }}}</title>
+	<meta name="description" content="{{ page.description }}">
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/styles.css">
+	{% include favicons.html %}
+	{% include social.html %}
+</head>
+
+<body>
+	{% include header.html %}
+	{{ content }}
+	{% include footer.html %}
+</body>
+
+</html>
