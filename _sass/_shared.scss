@@ -1,0 +1,133 @@
+html, body {
+	font-family: Ubuntu, "Open Sans", sans-serif !important;
+	font-size: 18px !important;
+	color: $gr-color-txt;
+	background-color: $gr-color-background;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.metamorph {
+	font-family: Metamorphous;
+}
+
+.center {
+	text-align: center !important;
+}
+
+.gr-large {
+	font-size: 30px;
+}
+
+
+// Classe for the main content grid
+.content-grid {
+    display: grid;
+    grid-column-gap: 8px;
+    grid-template-columns: [edge-left] minmax(0.5rem, 1fr) [content-start] repeat(10, minmax(1.12rem, 6rem)) [content-end] minmax(0.5rem, 1fr) [edge-right];
+    align-items: center;
+    justify-content: center;
+}
+
+.content-fw {
+	grid-column: edge-left / span edge-right;
+}
+
+.content-nw {
+	grid-column: content-start / span content-end;
+}
+
+body {
+    margin-bottom: 1000px;
+}
+
+// Fancy Ruler
+.fancy-hr {
+    font-size: 0px;
+    $wf: 1.8182;
+
+    --hr-height: 25px;
+
+    @media screen and (max-width: $gr-break-l) {
+        --hr-height: 20px;
+    }
+
+    @media screen and (max-width: $gr-break-m) {
+        --hr-height: 15px;
+    }
+
+    img {
+        height: var(--hr-height);
+        width: calc(var(--hr-height) * #{$wf});
+    }
+
+    .stretch {
+        width: calc(100% - var(--hr-height) * #{$wf} * 2);
+    }
+}
+
+// Mega Fancy Rulers
+.hero-hr {
+    font-size: 0;
+    $tf: 0.6977;
+    $bf: 0.3023;
+
+    --hr-height: 200px;
+
+    @media screen and (max-width: $gr-break-l) {
+        --hr-height: 150px;
+    }
+
+    @media screen and (max-width: $gr-break-m) {
+        --hr-height: 100px;
+    }
+
+    .head {
+        width: var(--hr-height);
+    }
+    
+    .simple {
+        height: var(--hr-height);
+    }
+
+    .top {
+        height: calc(var(--hr-height) * #{$tf});
+    }
+
+    .bot {
+        height: calc(var(--hr-height) * #{$bf});
+    }
+
+    .stretch {
+        width: calc(100% - var(--hr-height) * 2) !important;
+    }
+
+    .stretch-w-arrow {
+        width: calc((100% - var(--hr-height) * 3) / 2) !important;
+    }
+}
+
+
+// Function for fluid font-size
+@function strip-unit($value) {
+	@return $value / ($value * 0 + 1);
+}
+  
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+	$u1: unit($min-vw);
+	$u2: unit($max-vw);
+	$u3: unit($min-font-size);
+	$u4: unit($max-font-size);
+
+	@if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+	& {
+		font-size: $min-font-size;
+		@media screen and (min-width: $min-vw) {
+			font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+		}
+		@media screen and (min-width: $max-vw) {
+			font-size: $max-font-size;
+		}
+	}
+	}
+}

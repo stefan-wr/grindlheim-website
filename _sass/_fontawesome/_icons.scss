@@ -1,6 +1,8 @@
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
 
+   .#{$fa-css-prefix}-angle-down:before { content: $fa-var-angle-down; }
+   
 /*
 .#{$fa-css-prefix}-glass:before { content: $fa-var-glass; }
 .#{$fa-css-prefix}-music:before { content: $fa-var-music; }

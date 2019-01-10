@@ -1,12 +1,20 @@
-// Site Variables
-@import "variables";
+// W3CSS
+@import "w3css";
 
 // Fonts
 @import "fonts";
 @import "_fontawesome/font-awesome";
 
+//Bootstrap
+//@import "_bootstrap/bootstrap";
+//@import "_bootstrap/bootstrap-grid";
+//@import "_bootstrap/bootstrap-reboot";
+
+// Site
+@import "variables";
+@import "shared";
+
 // Layouts
 
-
 // Pages
-
+@import "_pages/index";

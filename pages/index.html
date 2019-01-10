@@ -1,0 +1,68 @@
+---
+layout: default
+page.title: Home
+page.description: Home
+permalink: /
+---
+
+<main>
+    <!-- Hero Image-->
+    <section class="hero">
+        <div class="hero-grid">
+
+            <div class="hero-title center">
+                <h1 class="metamorph">Grindlheim</h1>
+            </div>
+
+            <div class="content-fw hero-border-top">
+                <div class="hero-hr">
+                    <img class="top head" src="{{ site.baseurl }}/assets/img/hr/hero-hr-head-left-top.svg">
+                    <img class="top stretch-w-arrow" src="{{ site.baseurl }}/assets/img/hr/hero-hr-stretch-top.svg">
+                    <img class="top" src="{{ site.baseurl }}/assets/img/hr/hero-hr-mid-top.svg">
+                    <img class="top stretch-w-arrow" src="{{ site.baseurl }}/assets/img/hr/hero-hr-stretch-top.svg">
+                    <img class="top head" src="{{ site.baseurl }}/assets/img/hr/hero-hr-head-right-top.svg">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Content Grid -->
+    <div class="content-grid">
+
+        <div class="content-fw">
+            <div class="hero-hr">
+                <img class="bot head" src="{{ site.baseurl }}/assets/img/hr/hero-hr-head-left-bot.svg">
+                <img class="bot stretch" src="{{ site.baseurl }}/assets/img/hr/hero-hr-stretch-bot.svg">
+                <img class="bot head" src="{{ site.baseurl }}/assets/img/hr/hero-hr-head-right-bot.svg">
+            </div>
+        </div>
+
+        <!--div class="content-nw gr-large">
+            <p class="center">Welcome to the theme world of Grindlheim created in Planet Coaster.</p>
+        </div-->
+
+        <div class="content-nw coasters">
+            <a class="karos" href="#">
+                <img src="{{ site.baseurl }}/assets/img/karos.svg">
+            </a>
+            <span class="and metamorph center">&</span>
+            <a class="rikh" href="#">
+                <img src="{{ site.baseurl }}/assets/img/rikh.svg">
+            </a>
+        </div>
+
+        <div class="content-nw">
+            {% include fancy-hr.html %}
+        </div>
+
+        <div class="content-nw">
+            {% include mega-fancy-hr.html %}
+        </div>
+
+        <div class="content-nw">
+            {% include mega-fancy-hr-split.html %}
+        </div>
+
+    </div>
+</main>
