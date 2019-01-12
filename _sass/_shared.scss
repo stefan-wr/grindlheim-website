@@ -41,6 +41,7 @@ body {
     margin-bottom: 1000px;
 }
 
+
 // Fancy Ruler
 .fancy-hr {
     font-size: 0px;
@@ -66,23 +67,24 @@ body {
     }
 }
 
-// Mega Fancy Rulers
+
+// Mega Fancy Ruler
 .hero-hr {
     font-size: 0;
     $tf: 0.6977;
     $bf: 0.3023;
 
-    --hr-height: 200px;
+    --hr-height: 180px;
 
     @media screen and (max-width: $gr-break-l) {
-        --hr-height: 150px;
+        --hr-height: 140px;
     }
 
     @media screen and (max-width: $gr-break-m) {
         --hr-height: 100px;
     }
 
-    .head {
+    .head, .arrow {
         width: var(--hr-height);
     }
     
@@ -103,31 +105,31 @@ body {
     }
 
     .stretch-w-arrow {
-        width: calc((100% - var(--hr-height) * 3) / 2) !important;
+        width: calc((100% - var(--hr-height) * 3) / 2) !important;        
     }
 }
 
 
 // Function for fluid font-size
 @function strip-unit($value) {
-	@return $value / ($value * 0 + 1);
-}
+    @return $value / ($value * 0 + 1);
+  }
   
-@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-	$u1: unit($min-vw);
-	$u2: unit($max-vw);
-	$u3: unit($min-font-size);
-	$u4: unit($max-font-size);
-
-	@if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-	& {
-		font-size: $min-font-size;
-		@media screen and (min-width: $min-vw) {
-			font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-		}
-		@media screen and (min-width: $max-vw) {
-			font-size: $max-font-size;
-		}
-	}
-	}
-}
+  @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+  
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+      & {
+        font-size: $min-font-size;
+        @media screen and (min-width: $min-vw) {
+          font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        }
+        @media screen and (min-width: $max-vw) {
+          font-size: $max-font-size;
+        }
+      }
+    }
+  }

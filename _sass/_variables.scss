@@ -1,4 +1,5 @@
 // Colors
+//$gr-color-background: #1b1b1e;
 $gr-color-background: #151515;
 $gr-color-background-light: #202020;
 $gr-color-txt: white;
@@ -7,6 +8,6 @@ $gr-color-txt: white;
 $gr-max-width: 1186px;
 $gr-min-width: 308px;
 
-$gr-break-l: calc(#{$gr-max-width} - 100px);
-$gr-break-m: calc(580px);
-$gr-break-s: calc(#{$gr-min-width} + 1px);
+$gr-break-l: $gr-max-width - 100px;
+$gr-break-m: 580px;
+$gr-break-s: $gr-min-width + 1px;

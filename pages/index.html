@@ -6,36 +6,42 @@ permalink: /
 ---
 
 <main>
-    <!-- Hero Image-->
+    <!-- Hero-image section -->
     <section class="hero">
+        <!-- Background hero-image slideshow -->
+        <ul class="hero-slideshow">
+            <li>Hero Image 1</li>
+            <li>Hero Image 2</li>
+            <li>Hero Image 3</li>
+            <li>Hero Image 4</li>
+            <li>Hero Image 5</li>
+            <li style="background-image:url({{site.baseurl}}/assets/img/heros/6/hero1.jpg);">Hero Image 6</li>
+        </ul>
+        <!-- Hero grid on top-->
         <div class="hero-grid">
-
-            <div class="hero-title center">
+            <div class="content-fw hero-border-top">
+                {% include mega-fancy-hr-split-top.html %}
+            </div>
+            <div class="content-nw hero-title center">
                 <h1 class="metamorph">Grindlheim</h1>
             </div>
-
-            <div class="content-fw hero-border-top">
+            <div class="content-fw hero-border-bot">
                 <div class="hero-hr">
                     <img class="top head" src="{{ site.baseurl }}/assets/img/hr/hero-hr-head-left-top.svg">
                     <img class="top stretch-w-arrow" src="{{ site.baseurl }}/assets/img/hr/hero-hr-stretch-top.svg">
-                    <img class="top" src="{{ site.baseurl }}/assets/img/hr/hero-hr-mid-top.svg">
+                    <img class="top arrow" src="{{ site.baseurl }}/assets/img/hr/hero-hr-mid-top.svg">
                     <img class="top stretch-w-arrow" src="{{ site.baseurl }}/assets/img/hr/hero-hr-stretch-top.svg">
                     <img class="top head" src="{{ site.baseurl }}/assets/img/hr/hero-hr-head-right-top.svg">
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- Content Grid -->
+    <!-- Main Section - Content Grid -->
     <div class="content-grid">
 
         <div class="content-fw">
-            <div class="hero-hr">
-                <img class="bot head" src="{{ site.baseurl }}/assets/img/hr/hero-hr-head-left-bot.svg">
-                <img class="bot stretch" src="{{ site.baseurl }}/assets/img/hr/hero-hr-stretch-bot.svg">
-                <img class="bot head" src="{{ site.baseurl }}/assets/img/hr/hero-hr-head-right-bot.svg">
-            </div>
+            {% include mega-fancy-hr-split-bot.html %}
         </div>
 
         <!--div class="content-nw gr-large">
@@ -62,6 +68,11 @@ permalink: /
 
         <div class="content-nw">
             {% include mega-fancy-hr-split.html %}
+        </div>
+
+        <div class="content-nw">
+            {% include mega-fancy-hr-split-top.html %}
+            {% include mega-fancy-hr-split-bot.html %}
         </div>
 
     </div>

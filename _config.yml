@@ -16,7 +16,7 @@
 title: Grindlheim
 email: contact@grindlheim.de
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.grindlheim.de" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.wraase.de" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
