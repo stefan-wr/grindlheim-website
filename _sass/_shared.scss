@@ -15,8 +15,57 @@ html, body {
 	text-align: center !important;
 }
 
+// Font sizes:
+.gr-medium {
+	font-size: 26px;
+}
+
 .gr-large {
-	font-size: 30px;
+    font-size: 30px;
+}
+
+.gr-xlarge {
+    font-size: 34px;
+}
+
+.gr-xxlarge {
+    font-size: 38px;
+}
+
+@media screen and (max-width: $gr-break-l) {
+    .gr-medium {
+        font-size: 22px;
+    }
+    
+    .gr-large {
+        font-size: 26px;
+    }
+    
+    .gr-xlarge {
+        font-size: 30px;
+    }
+    
+    .gr-xxlarge {
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: $gr-break-m) {
+    .gr-medium {
+        font-size: 18px;
+    }
+    
+    .gr-large {
+        font-size: 22px;
+    }
+    
+    .gr-xlarge {
+        font-size: 26px;
+    }
+    
+    .gr-xxlarge {
+        font-size: 30px;
+    }
 }
 
 
@@ -41,8 +90,7 @@ body {
     margin-bottom: 1000px;
 }
 
-
-// Fancy Ruler
+// Fancy ruler
 .fancy-hr {
     font-size: 0px;
     $wf: 1.8182;
@@ -74,10 +122,10 @@ body {
     $tf: 0.6977;
     $bf: 0.3023;
 
-    --hr-height: 180px;
+    --hr-height: 179px;
 
     @media screen and (max-width: $gr-break-l) {
-        --hr-height: 140px;
+        --hr-height: 139px;
     }
 
     @media screen and (max-width: $gr-break-m) {
@@ -106,6 +154,12 @@ body {
 
     .stretch-w-arrow {
         width: calc((100% - var(--hr-height) * 3) / 2) !important;        
+    }
+}
+
+.hr-flip {
+    .bot, .top, .simple {
+        transform: scaleY(-1)
     }
 }
 

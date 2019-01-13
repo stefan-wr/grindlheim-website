@@ -34,7 +34,7 @@ function preloadimages() {
     }
 }
 
-// Javascript is enabled -> Blend out first hero image
+// Javascript is enabled -> blend out first hero image before it is loaded
 $("document").ready( function() {
     $(".hero-slideshow li:nth-child(6)").css("opacity", "0")
 })
@@ -51,7 +51,7 @@ $(window).on("load", function () {
     // Preload all remaining hero images
     preloadimages().done(function (images) {
         for (i = 1; i < 6; i++) {
-            // Set backlground-image in CSS
+            // Set background-image in CSS
             $(".hero-slideshow li:nth-child(" + i + ")").css("background-image", "url({{ site.baseurl }}/assets/img/heros/6/hero" + (i + 1) + ".jpg)")
         }
         // Wait 2s

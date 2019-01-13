@@ -19,7 +19,7 @@ permalink: /
         </ul>
         <!-- Hero grid on top-->
         <div class="hero-grid">
-            <div class="content-fw hero-border-top">
+            <div class="content-fw hero-border-top hr-flip">
                 {% include mega-fancy-hr-split-top.html %}
             </div>
             <div class="content-nw hero-title center">
@@ -37,16 +37,38 @@ permalink: /
         </div>
     </section>
 
-    <!-- Main Section - Content Grid -->
+    <!-- Main section - content grid -->
     <div class="content-grid">
-
+        <!-- Bottom half of hero ruler -->
         <div class="content-fw">
             {% include mega-fancy-hr-split-bot.html %}
         </div>
-
-        <!--div class="content-nw gr-large">
-            <p class="center">Welcome to the theme world of Grindlheim created in Planet Coaster.</p>
-        </div-->
+        <!-- Introduction-->
+        <div id="introduction" class="content-nw center">
+            <h2 class="center gr-xxlarge">Welcome to the theme world of Grindlheim</h2>
+            <p class="center gr-large">
+                Grindlheim is an extremely detailed and immersive theme world being created in Planet&nbsp;Coaster.
+                Inspired by Klugheim at Phantasialand, Grindlheim features two rollercoasters:
+                K'aros, an intense and fast multi launch coaster with quick turn-arounds, frightening head-choppers and an entwined layout
+                and Ri'kh, a family coaster which takes you on a short journey through the heart of Grindlheim.
+            </p>
+        </div>
+        <!-- Audio player-->
+        <div class="content-nw center">
+            <div id="audio-toggle" onclick="playAudio()">
+                <span class="gr-large">&nbsp;Music&nbsp;&nbsp;<i class="fa fa-volume-off"></i>&nbsp;</span>
+                <audio id="audio">
+                    <source src="{{ site.baseurl }}/assets/audio/theme.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+        <!-- Flipped hero ruler -->
+        <div class="content-fw hr-flip">
+            {% include mega-fancy-hr-split-bot.html %}
+        </div>
+        <div class="content-fw hr-flip">
+            {% include mega-fancy-hr-split-top.html %}
+        </div>
 
         <div class="content-nw coasters">
             <a class="karos" href="#">

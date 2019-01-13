@@ -1,8 +1,16 @@
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
 
-   .#{$fa-css-prefix}-angle-down:before { content: $fa-var-angle-down; }
-   
+.#{$fa-css-prefix}-angle-down:before { content: $fa-var-angle-down; }
+.#{$fa-css-prefix}-play:before { content: $fa-var-play; }
+.#{$fa-css-prefix}-pause:before { content: $fa-var-pause; }
+.#{$fa-css-prefix}-stop:before { content: $fa-var-stop; }
+.#{$fa-css-prefix}-volume-off:before { content: $fa-var-volume-off; }
+.#{$fa-css-prefix}-volume-up:before { content: $fa-var-volume-up; }
+.#{$fa-css-prefix}-ban:before { content: $fa-var-ban; }
+.#{$fa-css-prefix}-circle:before { content: $fa-var-circle; }
+.#{$fa-css-prefix}-circle-thin:before { content: $fa-var-circle-thin; }
+
 /*
 .#{$fa-css-prefix}-glass:before { content: $fa-var-glass; }
 .#{$fa-css-prefix}-music:before { content: $fa-var-music; }
