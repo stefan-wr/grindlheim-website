@@ -12,9 +12,12 @@
 
 // Site
 @import "variables";
+@import "font-sizes";
 @import "shared";
 
 // Layouts
+@import "footer";
+
 
 // Pages
 @import "_pages/index";

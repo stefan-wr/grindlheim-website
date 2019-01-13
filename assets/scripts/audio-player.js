@@ -4,7 +4,7 @@ function playAudio() {
 	} else {
 		audio.pause()
     }
-    $('#audio-toggle i').toggleClass("fa-volume-off fa-volume-up")
+    $('#audio-player i').toggleClass("fa-volume-off fa-volume-up")
 }
 
 $(document).ready( function() {
@@ -12,7 +12,7 @@ $(document).ready( function() {
 
     // Loop audio after 500 ms
     audio.onended = function() {
-        $('#audio-toggle i').toggleClass("fa-volume-off fa-volume-up")
+        $('#audio-player i').toggleClass("fa-volume-off fa-volume-up")
         setTimeout( function() {
             playAudio()
         }, 500)

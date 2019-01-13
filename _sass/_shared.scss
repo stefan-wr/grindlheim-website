@@ -1,10 +1,19 @@
 html, body {
 	font-family: Ubuntu, "Open Sans", sans-serif !important;
-	font-size: 18px !important;
+    font-size: 18px !important;
+    font-weight: 400;
 	color: $gr-color-txt;
 	background-color: $gr-color-background;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
 .metamorph {
@@ -15,67 +24,22 @@ html, body {
 	text-align: center !important;
 }
 
-// Font sizes:
-.gr-medium {
-	font-size: 26px;
-}
 
-.gr-large {
-    font-size: 30px;
-}
-
-.gr-xlarge {
-    font-size: 34px;
-}
-
-.gr-xxlarge {
-    font-size: 38px;
-}
-
-@media screen and (max-width: $gr-break-l) {
-    .gr-medium {
-        font-size: 22px;
-    }
-    
-    .gr-large {
-        font-size: 26px;
-    }
-    
-    .gr-xlarge {
-        font-size: 30px;
-    }
-    
-    .gr-xxlarge {
-        font-size: 34px;
-    }
-}
-
-@media screen and (max-width: $gr-break-m) {
-    .gr-medium {
-        font-size: 18px;
-    }
-    
-    .gr-large {
-        font-size: 22px;
-    }
-    
-    .gr-xlarge {
-        font-size: 26px;
-    }
-    
-    .gr-xxlarge {
-        font-size: 30px;
-    }
-}
-
-
-// Classe for the main content grid
+// Classes for the main content grid
 .content-grid {
     display: grid;
     grid-column-gap: 8px;
     grid-template-columns: [edge-left] minmax(0.5rem, 1fr) [content-start] repeat(10, minmax(1.12rem, 6rem)) [content-end] minmax(0.5rem, 1fr) [edge-right];
     align-items: center;
     justify-content: center;
+
+    &.on-bg {
+        position: relative;
+    }
+
+    &.with-gradient{
+        background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.8));
+    }
 }
 
 .content-fw {
@@ -86,9 +50,28 @@ html, body {
 	grid-column: content-start / span content-end;
 }
 
-body {
-    margin-bottom: 1000px;
+.grid-on-bg-container {
+    position: relative;
+    overflow: hidden;
+
+    .grid-bg-image {
+        color: transparent;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-repeat: none;
+        overflow: hidden;
+
+        &.blurred {
+            filter: blur(20px);
+        }
+    }
 }
+
 
 // Fancy ruler
 .fancy-hr {
@@ -108,15 +91,15 @@ body {
     img {
         height: var(--hr-height);
         width: calc(var(--hr-height) * #{$wf});
-    }
 
-    .stretch {
-        width: calc(100% - var(--hr-height) * #{$wf} * 2);
+        &.stretch {
+            width: calc(100% - var(--hr-height) * #{$wf} * 2);
+        }
     }
 }
 
 
-// Mega Fancy Ruler
+// Mega fancy ruler
 .hero-hr {
     font-size: 0;
     $tf: 0.6977;
@@ -161,6 +144,10 @@ body {
     .bot, .top, .simple {
         transform: scaleY(-1)
     }
+}
+
+.footer-hr{
+    background-color: $gr-color-background-light
 }
 
 

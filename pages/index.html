@@ -37,8 +37,9 @@ permalink: /
         </div>
     </section>
 
-    <!-- Main section - content grid -->
-    <div class="content-grid">
+    
+    <!-- Introduction section with content grid -->
+    <section class="content-grid">
         <!-- Bottom half of hero ruler -->
         <div class="content-fw">
             {% include mega-fancy-hr-split-bot.html %}
@@ -47,7 +48,7 @@ permalink: /
         <div id="introduction" class="content-nw center">
             <h2 class="center gr-xxlarge">Welcome to the theme world of Grindlheim</h2>
             <p class="center gr-large">
-                Grindlheim is an extremely detailed and immersive theme world being created in Planet&nbsp;Coaster.
+                Grindlheim is an highly detailed and immersive theme world being created in Planet&nbsp;Coaster.
                 Inspired by Klugheim at Phantasialand, Grindlheim features two rollercoasters:
                 K'aros, an intense and fast multi launch coaster with quick turn-arounds, frightening head-choppers and an entwined layout
                 and Ri'kh, a family coaster which takes you on a short journey through the heart of Grindlheim.
@@ -55,47 +56,55 @@ permalink: /
         </div>
         <!-- Audio player-->
         <div class="content-nw center">
-            <div id="audio-toggle" onclick="playAudio()">
+            <div id="audio-player" onclick="playAudio()">
                 <span class="gr-large">&nbsp;Music&nbsp;&nbsp;<i class="fa fa-volume-off"></i>&nbsp;</span>
                 <audio id="audio">
                     <source src="{{ site.baseurl }}/assets/audio/theme.mp3" type="audio/mp3">
                 </audio>
             </div>
         </div>
-        <!-- Flipped hero ruler -->
+        <!-- Flipped bottom hero ruler top half -->
         <div class="content-fw hr-flip">
             {% include mega-fancy-hr-split-bot.html %}
         </div>
-        <div class="content-fw hr-flip">
-            {% include mega-fancy-hr-split-top.html %}
-        </div>
+    </section>
+    
 
-        <div class="content-nw coasters">
-            <a class="karos" href="#">
-                <img src="{{ site.baseurl }}/assets/img/karos.svg">
-            </a>
-            <span class="and metamorph center">&</span>
-            <a class="rikh" href="#">
-                <img src="{{ site.baseurl }}/assets/img/rikh.svg">
-            </a>
-        </div>
+    <!-- Coaster section with content grid -->
+    <section class="grid-on-bg-container">
+        <!-- Background image -->
+        <div class="grid-bg-image blurred" style="background-image:url({{site.baseurl}}/assets/img/rikh-bg.jpg);"></div>
+        <!--- Content grid -->
+        <div class="content-grid on-bg with-gradient">
+            <!-- Flipped top hero ruler bottom half -->
+            <div class="content-fw hr-flip">
+                {% include mega-fancy-hr-split-top.html %}
+            </div>
 
-        <div class="content-nw">
-            {% include fancy-hr.html %}
-        </div>
+            <div class="content-nw coasters">
+                <a class="karos" href="#">
+                    <img src="{{ site.baseurl }}/assets/img/karos.svg">
+                </a>
+                <span class="and metamorph center">&</span>
+                <a class="rikh" href="#">
+                    <img src="{{ site.baseurl }}/assets/img/rikh.svg">
+                </a>
+            </div>
 
-        <div class="content-nw">
-            {% include mega-fancy-hr.html %}
-        </div>
+            <!-- Fancy ruler -->
+            <div class="content-nw">
+                {% include fancy-hr.html %}
+            </div>
 
-        <div class="content-nw">
-            {% include mega-fancy-hr-split.html %}
-        </div>
+            <div class="content-fw" style="margin-top:1000px;">
+            </div>
 
-        <div class="content-nw">
-            {% include mega-fancy-hr-split-top.html %}
-            {% include mega-fancy-hr-split-bot.html %}
+            <div class="content-fw">
+                {% include mega-fancy-hr-split-top.html %}
+            </div>
+            <div class="content-fw footer-hr">
+                {% include mega-fancy-hr-split-bot.html %}
+            </div>
         </div>
-
-    </div>
+    </section>
 </main>

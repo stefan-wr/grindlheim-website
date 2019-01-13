@@ -1,0 +1,52 @@
+// Font sizes:
+.gr-medium {
+	font-size: 25px;
+}
+
+.gr-large {
+    font-size: 29px;
+}
+
+.gr-xlarge {
+    font-size: 34px;
+}
+
+.gr-xxlarge {
+    font-size: 38px;
+}
+
+@media screen and (max-width: $gr-break-l) {
+    .gr-medium {
+        font-size: 21px;
+    }
+    
+    .gr-large {
+        font-size: 25px;
+    }
+    
+    .gr-xlarge {
+        font-size: 30px;
+    }
+    
+    .gr-xxlarge {
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: $gr-break-m) {
+    .gr-medium {
+        font-size: 17px;
+    }
+    
+    .gr-large {
+        font-size: 21px;
+    }
+    
+    .gr-xlarge {
+        font-size: 26px;
+    }
+    
+    .gr-xxlarge {
+        font-size: 30px;
+    }
+}
