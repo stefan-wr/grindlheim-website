@@ -1,27 +1,29 @@
-footer{
+footer {
+    grid-row-gap: 2em;
     background-color: $gr-color-background-light;
     padding-bottom: 1.5em;
     align-items: start !important;
-    color: white;
 
-    .status {
-        padding-bottom: 1.5em;
-        border-bottom: 0.2em dotted white;
+    p {
+        margin: 0px 0px 0.5em 0px;
+    }
 
+    #created {
         p {
-            margin: 0.5em 0;
-        }
-
-        p:first-of-type {
             padding: 0px 1em;
             font-weight: 700;
-            margin-bottom: 1.3em;
-            margin-top: 0px;
         }
+    }
+
+    #status {
+        padding: 0 1em 1.5em 1em;
+        border-bottom: 0.2em dotted white;
     }
 
     ul {
         list-style-type: none;
+        padding-left: 1em;
+        margin: 0px;
     }
 
     li {
@@ -34,7 +36,8 @@ footer{
     background: white;
     border: 2px solid white;
     border-radius: 1000px;
-    overflow: hidden;    
+    overflow: hidden;
+    box-shadow: 0px 2px 4px $gr-color-box-shadow-light;
     
     .left {
         float: right;
@@ -44,12 +47,13 @@ footer{
     }
 
     .right {
-        $progress: 51%;
         float: right;
-        width: $progress;
         background-color: $gr-color-background-light;
-        animation: breathing 4s infinite;
+        
+        $progress: 51%;
+        width: $progress;
 
+        animation: breathing 4s infinite;
         @keyframes breathing {
             0%   { width: $progress; animation-timing-function: ease-in };
             50%  { width: ($progress - 2%); animation-timing-function: ease-out };
@@ -60,7 +64,6 @@ footer{
 
 #social-links {
     grid-column: content-start / span 5;
-    grid-row: 2;
 
     img {
         margin-right: 0.5em;
@@ -69,29 +72,28 @@ footer{
 
 #legals {
     grid-column: 7 / content-end;
-    grid-row: 2;
 }
 
 @media screen and (max-width: $gr-break-l) {
+    footer {
+        grid-row-gap: 1em;
+    }
+
+    #status {
+        padding-bottom: 1em;
+    }
+
     #social-links {
         grid-column: content-start / span 6;
-        grid-row: 2;
     }
     
     #legals {
         grid-column: 8 / content-end;
-        grid-row: 2;
     }    
 }
 
 @media screen and (max-width: $gr-break-m) {
-    #social-links {
+    #social-links, #legals {
         grid-column: content-start / content-end;
-        grid-row: 2;
-    }
-
-    #legals {
-        grid-column: content-start / content-end;
-        grid-row: 3;        
-    }    
+    } 
 }
