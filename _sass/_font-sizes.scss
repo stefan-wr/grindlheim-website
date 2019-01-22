@@ -1,4 +1,8 @@
 // Font sizes:
+.gr-small {
+	font-size: 21px;
+}
+
 .gr-medium {
 	font-size: 25px;
 }
@@ -16,6 +20,10 @@
 }
 
 @media screen and (max-width: $gr-break-l) {
+    .gr-small {
+        font-size: 17px;
+    }
+
     .gr-medium {
         font-size: 21px;
     }
@@ -34,6 +42,10 @@
 }
 
 @media screen and (max-width: $gr-break-m) {
+    .gr-small {
+        font-size: 13px;
+    }
+
     .gr-medium {
         font-size: 17px;
     }

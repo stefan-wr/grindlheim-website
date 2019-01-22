@@ -3,8 +3,10 @@
 $gr-color-background: #151515;
 $gr-color-background-light: #202020;
 $gr-color-txt: white;
+$gr-color-txt-hover: rgb(150, 150, 150);
 
 $gr-color-box-shadow-light: rgba(255, 255, 255, 0.2);
+$gr-color-box-shadow-darker: rgba(255, 255, 255, 0.1);
 
 // Layout
 $gr-max-width: 1186px;
@@ -13,3 +15,6 @@ $gr-min-width: 308px;
 $gr-break-l: $gr-max-width - 100px;
 $gr-break-m: 580px;
 $gr-break-s: $gr-min-width + 1px;
+
+// Transitio Speeds
+$gr-transition-speed: 0.1s;

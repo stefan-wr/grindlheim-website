@@ -37,7 +37,7 @@ permalink: /
         </div>
     </section>
 
-    
+
     <!-- Introduction section with content grid -->
     <section class="content-grid">
         <!-- Bottom half of hero ruler -->
@@ -45,12 +45,13 @@ permalink: /
             {% include mega-fancy-hr-split-bot.html %}
         </div>
         <!-- Introduction-->
-        <div id="introduction" class="content-nw center">
-            <h2 class="center gr-xxlarge">Welcome to the theme world of Grindlheim</h2>
+        <div class="content-nw center">
+            <h2 class="center gr-xxlarge bold">Welcome to the theme world of Grindlheim</h2>
             <p class="center gr-large">
                 Grindlheim is an highly detailed and immersive theme world being created in Planet&nbsp;Coaster.
                 Inspired by Klugheim at Phantasialand, Grindlheim features two rollercoasters:
-                K'aros, an intense and fast multi launch coaster with quick turn-arounds, frightening head-choppers and an entwined layout
+                K'aros, an intense and fast multi launch coaster with quick turn-arounds, frightening head-choppers and
+                an entwined layout
                 and Ri'kh, a family coaster which takes you on a short journey through the heart of Grindlheim.
             </p>
         </div>
@@ -68,9 +69,9 @@ permalink: /
             {% include mega-fancy-hr-split-bot.html %}
         </div>
     </section>
-    
 
-    <!-- Coaster section with content grid -->
+
+    <!-- Karos coaster section with content grid -->
     <section class="grid-on-bg-container">
         <!-- Background image -->
         <div class="grid-bg-image blurred" style="background-image:url({{site.baseurl}}/assets/img/rikh-bg.jpg);"></div>
@@ -81,29 +82,31 @@ permalink: /
                 {% include mega-fancy-hr-split-top.html %}
             </div>
 
-            <div class="content-nw coasters">
-                <a class="karos" href="#">
-                    <img src="{{ site.baseurl }}/assets/img/karos.svg">
-                </a>
-                <span class="and metamorph center">&</span>
-                <a class="rikh" href="#">
-                    <img src="{{ site.baseurl }}/assets/img/rikh.svg">
-                </a>
-            </div>
+            <div class="content-nw coasters-grid">
+                <div class="content-nw">
+                    <h2 class="gr-xxlarge center bold"><b>Experience the two unique rollercoasters K'aros and Ri'kh</b></h2>
+                </div>
 
-            <!-- Fancy ruler -->
-            <div class="content-nw">
-                {% include fancy-hr.html %}
-            </div>
+                <div class="content-nw">
+                    {% include fancy-hr.html %}
+                </div>
 
-            <div class="content-fw" style="margin-top:1000px;">
+                <div class="content-nw">
+                    <a class="coaster-link" href="#">
+                        <div class="bg-image" style="background-image:url({{site.baseurl}}/assets/img/karos-logo-bg.jpg)"></div>
+                        <img class="logo" src="{{ site.baseurl }}/assets/img/karos.svg" alt="K'aros">
+                    </a>
+                </div>
+                <div class="content-nw">
+                    <a class="coaster-link" href="#">
+                        <div class="bg-image" style="background-image:url({{site.baseurl}}/assets/img/rikh-logo-bg.jpg)"></div>
+                        <img class="logo" src="{{ site.baseurl }}/assets/img/rikh.svg" alt="Ri'kh">
+                    </a>
+                </div>
             </div>
 
             <div class="content-fw">
                 {% include mega-fancy-hr-split-top.html %}
-            </div>
-            <div class="content-fw footer-hr">
-                {% include mega-fancy-hr-split-bot.html %}
             </div>
         </div>
     </section>

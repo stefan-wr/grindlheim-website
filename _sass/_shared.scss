@@ -10,9 +10,16 @@ html, body {
 
 a {
     text-decoration: none;
+    transition: linear $gr-transition-speed;
 
     &:hover {
-        opacity: 0.7;
+        color: $gr-color-txt-hover;
+    }
+}
+
+.a-hover-opacity {
+    &:hover {
+        opacity:0.7;
     }
 }
 
@@ -22,6 +29,10 @@ a {
 
 .center {
 	text-align: center !important;
+}
+
+.bold {
+    font-weight: 700 !important;
 }
 
 
@@ -48,6 +59,10 @@ a {
 
 .content-nw {
 	grid-column: content-start / span content-end;
+}
+
+.align-item-top {
+    align-self: start;
 }
 
 .grid-on-bg-container {
