@@ -147,7 +147,7 @@ $hero-height: 100vh;
     cursor: pointer;
     
     span {
-        border: 0.08em solid white;
+        @extend .resp-border-m;
         border-radius: 1000px;
         padding: 0.15em 0.5em;
         transition: $gr-transition-speed ease-in;
@@ -155,7 +155,7 @@ $hero-height: 100vh;
 
     &:hover{
         span {
-            background: white;
+            background: $gr-color-txt;
             color: black;
             box-shadow: 0px 4px 8px $gr-color-box-shadow-light;
         }

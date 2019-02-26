@@ -1,24 +1,25 @@
 .logo {
     max-height:  280px;
-    max-width: 100%;
+    max-width: 85%;
 }
 
 .logo-bg-blurred {
-    filter: grayscale(15%) brightness(110%) contrast(85%) blur(7px);
+    filter: grayscale(15%) brightness(110%) contrast(85%) blur(5px);
 }
 
 .back {
     text-align: left;
-    margin: 0.5rem 0.5rem 0px 0.5rem;
+    margin: 0.5rem 0.5rem 0px 0px;
 
     @media screen and (max-width: $gr-break-m) {
-        margin: 0.3rem;
+        margin: 0.3rem 0.3rem 0.3rem 0px;
     }
 
     a {
-        border: 0.1em solid white;
-        border-radius: 1000px;
-        padding: 0.05em 0.6em 0.11em 0.5em;
+        @extend .resp-border-m;
+        border-radius: 0px 1000px 1000px 0px;
+        border-left: none;
+        padding: 0.05em 0.6em 0.11em 0.3em;
         transition: $gr-transition-speed ease-in;
         opacity: 0.4;
 
@@ -34,20 +35,27 @@
 .gallery-nav {
     display: inline-block;
     background-color: rgba(0,0,0,0.7);
-    border: 0.1em solid white;
+    @extend .resp-border-m;
     border-radius: 1000px;
     transition: $gr-transition-speed ease-in;
-    opacity: 0.1;
+    opacity: 0.8;
     overflow: hidden;
 
-    &:hover {
-        opacity: 1;
-        box-shadow: 0px 4px 8px $gr-color-box-shadow-light;
+    @media (hover: hover) {
+        opacity: 0.1;
+
+        &:hover {
+            opacity: 1;
+            box-shadow: 0px 4px 8px $gr-color-box-shadow-light;
+        }
     }
 
-    span {
+    span, button {
         display: inline-block;
         padding: 0.4em 0.7em;
+        background: none;
+        border: none;
+        color: white;
 
         @media screen and (max-width: $gr-break-l) {
             padding: 0.3em 0.6em;

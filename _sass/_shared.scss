@@ -35,6 +35,14 @@ a {
     font-weight: 700 !important;
 }
 
+.resp-border-m {
+    border: 2px solid white;
+
+    @media screen and (max-width: $gr-break-m) {
+        border-width: 1px;
+    }
+}
+
 
 // Classes for the main content grid
 .content-grid {
