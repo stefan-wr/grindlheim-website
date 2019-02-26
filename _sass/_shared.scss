@@ -108,7 +108,7 @@ a {
         width: calc(var(--hr-height) * #{$wf});
 
         &.stretch {
-            width: calc(100% - var(--hr-height) * #{$wf} * 2);
+            width: calc(100% - var(--hr-height) * #{$wf} * 2 - 0.1px);
         }
     }
 }

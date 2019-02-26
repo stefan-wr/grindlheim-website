@@ -14,9 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Grindlheim
-email: contact@grindlheim.de
+email: contact@grindlheim.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.wraase.de" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://www.grindlheim.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown

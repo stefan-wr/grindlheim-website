@@ -9,6 +9,7 @@ permalink: /
     <!-- Hero-image section -->
     <section class="hero">
         <!-- Background hero-image slideshow -->
+        <script src="{{ site.baseurl }}/assets/scripts/start-slideshow.js"></script>
         <ul class="hero-slideshow">
             <li>Hero Image 1</li>
             <li>Hero Image 2</li>
@@ -24,6 +25,10 @@ permalink: /
             </div>
             <div class="content-nw hero-title center">
                 <h1 class="metamorph">Grindlheim</h1>
+            </div>
+            <div class="content-nw loading center">
+                <span class="gr-medium">Loading Slideshow</span><br>
+                <img src="{{ site.baseurl }}/assets/img/loading.svg">
             </div>
             <div class="content-fw hero-border-bot">
                 <div class="hero-hr">
@@ -57,6 +62,7 @@ permalink: /
         </div>
         <!-- Audio player-->
         <div class="content-nw center">
+            <script src="{{ site.baseurl }}/assets/scripts/audio-player.js"></script>
             <div id="audio-player" onclick="playAudio()">
                 <span class="gr-large">&nbsp;Music&nbsp;&nbsp;<i class="fa fa-volume-off"></i>&nbsp;</span>
                 <audio id="audio">
@@ -92,7 +98,7 @@ permalink: /
                 </div>
 
                 <div class="content-nw">
-                    <a class="coaster-link" href="#">
+                    <a class="coaster-link" href="{{ site.baseurl }}{{ site.data.urls.karos }}">
                         <div class="bg-image" style="background-image:url({{site.baseurl}}/assets/img/karos-logo-bg.jpg)"></div>
                         <img class="logo" src="{{ site.baseurl }}/assets/img/karos.svg" alt="K'aros">
                     </a>
@@ -105,6 +111,7 @@ permalink: /
                 </div>
             </div>
 
+            <!--  Bottom hero ruler top half -->
             <div class="content-fw">
                 {% include mega-fancy-hr-split-top.html %}
             </div>
