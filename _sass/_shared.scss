@@ -17,6 +17,22 @@ a {
     }
 }
 
+button {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 .a-hover-opacity {
     &:hover {
         opacity:0.7;
@@ -71,6 +87,10 @@ a {
 
 .align-item-top {
     align-self: start;
+}
+
+.align-item-bot {
+    align-self: end;
 }
 
 .grid-on-bg-container {

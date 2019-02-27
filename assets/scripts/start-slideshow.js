@@ -49,7 +49,12 @@ hero1.src = "{{ site.baseurl }}/assets/img/heros/6/hero1.jpg"
 // Wait for page to be completed before loading the rest of the hero images
 $(window).on("load", function () {
     // Fade in loading symbol
-    $(".hero-grid .loading").fadeIn()
+    var loaded = false
+    setTimeout(function() {
+        if (loaded != true) {
+            $(".hero-grid .loading").fadeIn()
+        }
+    }, 750)
     // Preload all remaining hero images
     preloadimages().done(function (images) {
         for (i = 1; i < 6; i++) {
@@ -57,6 +62,7 @@ $(window).on("load", function () {
             $(".hero-slideshow li:nth-child(" + i + ")").css("background-image", "url({{ site.baseurl }}/assets/img/heros/6/hero" + (i + 1) + ".jpg)")
         }
         // Fade out loading symbol
+        loaded = true
         $(".hero-grid .loading").fadeOut()
         // Wait 2s
         setTimeout(function () {

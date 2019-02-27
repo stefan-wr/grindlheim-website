@@ -5,38 +5,6 @@ page.description: Home
 permalink: /karos/
 ---
 
-<script>
-
-    var img_path = "/assets/img/heros/6/hero"
-    var img_type = ".jpg"
-    var n_imgs = 6
-    var current = 1
-
-    function get_img_str(next) {
-        if (next > n_imgs) {
-            current = 1
-        } else if (next < 1) {
-            current = n_imgs
-        } else {
-            current = next
-        }
-        return img_path + current + img_type
-    }
-
-    function next_img() {
-        $('#first-img').attr('src', get_img_str(current + 1))
-    }
-
-    function prev_img() {
-        $('#first-img').attr('src', get_img_str(current - 1))
-    }
-
-    $('document').ready(function () {
-        $('#first-img').attr('src', get_img_str(current))
-    });
-
-</script>
-
 <main class="center">
     <section class="grid-on-bg-container">
         <!-- Background image -->
@@ -55,39 +23,60 @@ permalink: /karos/
                 <img class="logo" src="{{ site.baseurl }}/assets/img/karos.svg" alt="K'aros">
             </div>
 
-            <!-- Flipped hero ruler bottom half -->
+            <!-- Hero ruler bottom half flipped -->
             <div class="content-fw hr-flip">
                 {% include mega-fancy-hr-split-bot.html %}
             </div>
         </div>
     </section>
 
-    <section class="content grid">
+
+    <section id="gallery" class="grid-on-bg-container gallery">
+        <!-- Gallery JS configuration-->
+        <script src="{{ site.baseurl }}/assets/scripts/galleryclass.js"></script>
+        <script>
+            var karosGallery = new Gallery('#gallery', '{{ site.baseurl }}/assets/img/heros/6/hero', '.jpg', 6, 1)
+        </script>
+
+        <!-- Background image -->
+        <div class="grid-bg-image gallery-img"
+            style="background-image:url({{site.baseurl}}/assets/img/heros/6/hero1.jpg);"></div>
+
         <!--- Content grid -->
-        <div class="content-grid on-bg with-gradient">
-            <!-- Flipped top hero ruler bottom half -->
+        <div class="content-grid on-bg gallery-grid">
+            <!-- Hero ruler top half flipped -->
             <div class="content-fw hr-flip">
                 {% include mega-fancy-hr-split-top.html %}
             </div>
 
-            <div class="content-nw">
+            <!-- Gallery controls -->
+            <div class="content-nw align-item-top">
                 <div class="gallery-nav gr-medium">
-                    <button class="btn" id="btn-prev" onclick="prev_img()"><i class="fa fa-angle-left"></i> Previous</button>
-                    <span id="img-number">3 / 10</span>
-                    <button class="btn" id="fullscreen"><i class="fa fa-arrows-alt"></i></button>
-                    <button class="btn" id="btn-next" onclick="prev_img()">Next <i class="fa fa-angle-right"></i></button>
+                    <button class="previous">
+                        <i class="fa fa-angle-left"></i>&nbsp;Previous
+                    </button>
+                    <span class="img-number">1 / 1</span>
+                    <a class="fullscreen" href="{{site.baseurl}}/assets/img/heros/6/hero1.jpg" target="blank">
+                        <i class="fa fa-arrows-alt"></i>
+                    </a>
+                    <button class="next">
+                        Next&nbsp;<i class="fa fa-angle-right"></i>
+                    </button>
                 </div>
             </div>
 
-            <div class="content-nw">
-                <div style="margin-top:800px;"></div>
+            <!-- Loading indicator -->
+            <div class="content-nw center">
+                <div class="gallery-loading">
+                    <span class="gr-medium">Loading Image</span><br>
+                    <img src="{{ site.baseurl }}/assets/img/loading.svg">
+                </div>
             </div>
 
+            <!-- Hero ruler top half -->
             <div class="content-fw">
                 {% include mega-fancy-hr-split-top.html %}
             </div>
         </div>
     </section>
-    <!-- button id="btn-prev" onclick="prev_img()">Previous</button>
-    <img id="first-img"-->
 </main>
