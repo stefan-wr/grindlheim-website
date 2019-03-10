@@ -108,32 +108,32 @@ $hero-height: 100vh;
     }
 
     li:nth-child(1) {
-        //background-image: url(/assets/img/heros/6/hero2.jpg);
+        //background-image: url(/assets/img/heros/hero2.jpg);
         background-position: 0% 0%;
     }
 
     li:nth-child(2) {
-        //background-image: url(/assets/img/heros/6/hero3.jpg);
+        //background-image: url(/assets/img/heros/hero3.jpg);
         background-position: 45% 0%;
     }
 
     li:nth-child(3) {
-        //background-image: url(/assets/img/heros/6/hero4.jpg);
+        //background-image: url(/assets/img/heros/hero4.jpg);
         background-position: 35% 0%;
     }
 
     li:nth-child(4) {
-        //background-image: url(/assets/img/heros/6/hero5.jpg);
+        //background-image: url(/assets/img/heros/hero5.jpg);
         background-position: 50% 0%;
     }
 
     li:nth-child(5) {
-        //background-image: url(/assets/img/heros/6/hero6.jpg);
+        //background-image: url(/assets/img/heros/hero6.jpg);
         background-position: 70% 0%;
     }
 
     li:nth-child(6) {
-        //background-image: url(/assets/img/heros/6/hero1.jpg);
+        //background-image: url(/assets/img/heros/hero1.jpg);
         opacity: 1;
         background-position: 70% 0%;
     }
@@ -259,5 +259,47 @@ $hero-height: 100vh;
         @media screen and (max-width: $gr-break-m) {
             max-width: 80%;
         }  
+    }
+}
+
+.blog-grid {
+    grid-row-gap: 30px;
+
+    @media screen and (max-width: $gr-break-l) {
+        grid-row-gap: 20px;
+    }  
+
+    @media screen and (max-width: $gr-break-m) {
+        grid-row-gap: 10px;
+    }
+
+    .date-tags {
+        color: $gr-color-txt-hover;
+    }
+
+    .status {
+        padding-bottom: 2px !important;
+
+        p {
+            margin: 0px 0px 0.5em 0px;
+        }
+    }
+
+    .post {
+        background-color: $gr-color-background-light;
+        box-shadow: inset 0px 0px 4px black;
+        padding: 8px 30px;
+        border-radius: 28px;
+        //border: 2px solid white;
+        
+        @media screen and (max-width: $gr-break-l) {
+            padding: 6px 25px;
+            border-radius: 23px;
+        }  
+    
+        @media screen and (max-width: $gr-break-m) {
+            padding: 2px 17px;
+            border-radius: 18px;
+        }
     }
 }

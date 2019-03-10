@@ -1,0 +1,13 @@
+.logo {
+    max-height:  280px;
+    max-width: 85%;
+    margin-top: 20px;
+
+    @media screen and (max-width: $gr-break-m) {
+        margin-top: 10px;
+    }
+}
+
+.logo-bg-blurred {
+    filter: grayscale(15%) brightness(110%) contrast(85%) blur(5px);
+}

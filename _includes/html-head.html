@@ -1,0 +1,63 @@
+<!-- Canonical Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+{% if page.no-index %}<meta name="robots" content="none">{% endif %}
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+<!-- Title and Description -->
+<title>{{ page.title }}{% unless page.title-as-is %} | {{ site.title }}{% if page.layout == 'post' %} Blog{% endif %}{% endunless %}</title>
+<meta name="description" content="{{ page.description }}">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/styles.css">
+
+<!-- Scripts -->
+{% unless page.layout == 'blank'%}<script src="{{ site.baseurl }}/assets/scripts/jquery.js"></script>{% endunless %}
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl_root }}/assets/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl_root }}/assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl_root }}/assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="{{ site.baseurl_root }}/assets/favicons/site.webmanifest">
+<link rel="mask-icon" href="{{ site.baseurl_root }}/assets/favicons/safari-pinned-tab.svg" color="#920a30">
+<link rel="shortcut icon" href="{{ site.baseurl_root }}/assets/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="msapplication-config" content="{{ site.baseurl_root }}/assets/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Social -->
+{% if page.layout == 'post'%}
+    <!-- OG -->
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time " content="{{ page.date | date: '%Y-%m-%d' }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.excerpt }}">
+    <meta property="og:image:width" content="1190">
+    <meta property="og:image:height" content="623">
+    <meta property="og:image" content="{{ site.url }}/assets/posts/{{ page.index }}/p{{ page.index }}-og.jpg">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Dravar0l">
+    <meta name="twitter:creator" content="@Dravar0l">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.excerpt }}">
+    <meta name="twitter:image" content="{{ site.url }}/assets/posts/{{ page.index }}/p{{ page.index }}-og.jpg">
+{% else %}
+    <!-- OG -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:image:width" content="1190">
+    <meta property="og:image:height" content="623">
+    <meta property="og:image" content="{{ site.url }}/assets/social/{{ page.og-image }}">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Dravar0l">
+    <meta name="twitter:creator" content="@Dravar0l">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.description }}">
+    <meta name="twitter:image" content="{{ site.url }}/assets/social/{{ page.og-image }}"> 
+{% endif %}

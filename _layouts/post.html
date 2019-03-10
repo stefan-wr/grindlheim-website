@@ -1,0 +1,121 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include html-head.html %}
+</head>
+
+<body>
+    <main class="center">
+
+        <!-- Title section -->
+        <section class="grid-on-bg-container">
+            <!-- Background image -->
+            <div class="grid-bg-image title-bg-blurred"
+                style="background-image:url({{site.baseurl}}/assets/posts/{{page.index}}/p{{page.index}}-title-bg.jpg);background-position: 50% 0%;">
+            </div>
+            <!-- Content grid -->
+            <div class="content-grid on-bg with-gradient">
+                <!-- Back button -->
+                <div class="content-fw gr-medium back">
+                    <a href="/#blog"><i class="fa fa-angle-left"></i> Back</a>
+                </div>
+                <!-- Post title -->
+                <div class="content-nw post-title txt-shadow">
+                    <h1 class="gr-xxxlarge bold">{{ page.title }}</h1>
+                    <span class="gr-large">Update #{{ page.index }} &nbsp;-&nbsp;
+                        {{ page.date | date: "%m/%d/%Y" }}</span>
+                </div>
+                <!-- Hero ruler top half -->
+                <div class="content-fw">
+                    {% include mega-fancy-hr-split-top.html %}
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Text section with content grid -->
+        <section class="content-grid">
+            <!-- Bottom half of hero ruler -->
+            <div class="content-fw">
+                {% include mega-fancy-hr-split-bot.html %}
+            </div>
+
+            <!-- Post Content -->
+            <div class="content-nw">
+                <p class="gr-large">
+                    {{ content }}
+                </p>
+            </div>
+
+            <!-- Flipped bottom hero ruler top half -->
+            <div class="content-fw hr-flip">
+                {% include mega-fancy-hr-split-bot.html %}
+            </div>
+        </section>
+
+
+        <!-- Gallery -->
+        <section id="gallery" class="grid-on-bg-container gallery">
+            <!-- Gallery JS configuration -->
+            <script src="{{ site.baseurl }}/assets/scripts/gallery.js"></script>
+            <script>
+                var gallery = new Gallery('#gallery', '{{ site.baseurl }}/assets/posts/{{ page.index }}/p{{ page.index }}-', '.jpg', {{ page.number-of-images }}, 1, [{%for txt in page.image-descriptions %}'{{txt}}'{% if forloop.last == false %},{%endif%}{%endfor%}]);
+            </script>
+            <!-- Background image -->
+            <div class="grid-bg-image gallery-img"
+                style="background-image:url({{site.baseurl}}/assets/posts/{{page.index}}/p{{page.index}}-1.jpg);"></div>
+            <!-- Content grid -->
+            <div class="content-grid on-bg gallery-grid with-txt">
+                <!-- Hero ruler top half flipped -->
+                <div class="content-fw hr-flip">
+                    {% include mega-fancy-hr-split-top.html %}
+                </div>
+                <!-- Gallery controls -->
+                <div class="content-nw align-item-top">
+                    <div class="gallery-nav gr-medium">
+                        <button class="previous">
+                            <i class="fa fa-angle-left"></i>&nbsp;Previous
+                        </button>
+                        <span class="img-number">1 / 1</span>
+                        <a class="fullscreen" href="{{site.baseurl}}/assets/posts/{{page.index}}/p{{page.index}}-1.jpg"
+                            target="blank">
+                            <i class="fa fa-arrows-alt"></i>
+                        </a>
+                        <button class="toggle-txt">
+                            <i class="fa fa-eye-slash"></i>
+                        </button>
+                        <button class="next">
+                            Next&nbsp;<i class="fa fa-angle-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Loading indicator -->
+                <div class="content-nw center">
+                    <div class="gallery-loading">
+                        <span class="gr-medium">Loading Image</span><br>
+                        <img src="{{ site.baseurl }}/assets/img/loading.svg">
+                    </div>
+                </div>
+                <!-- Text -->
+                <div class="content-nw">
+                    <p class="gr-medium center gallery-txt">
+                            
+                    </p>
+                </div>
+                <!-- Hero ruler top half -->
+                <div class="content-fw">
+                    {% include mega-fancy-hr-split-top.html %}
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    {% include footer.html %}
+</body>
+</html>

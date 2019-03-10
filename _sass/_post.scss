@@ -1,0 +1,11 @@
+.title-bg-blurred {
+    filter: grayscale(15%) brightness(100%) contrast(85%) blur(7px);
+}
+
+.post-title {
+    margin-top: 30px;
+
+    @media screen and (max-width: $gr-break-m) {
+        margin-top: 10px;
+    }
+}

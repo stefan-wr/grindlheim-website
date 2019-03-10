@@ -19,6 +19,10 @@
     font-size: 38px;
 }
 
+.gr-xxxlarge {
+    font-size: 50px;
+}
+
 @media screen and (max-width: $gr-break-l) {
     .gr-small {
         font-size: 17px;
@@ -38,6 +42,10 @@
     
     .gr-xxlarge {
         font-size: 34px;
+    }
+
+    .gr-xxxlarge {
+        font-size: 42px;
     }
 }
 
@@ -60,5 +68,9 @@
     
     .gr-xxlarge {
         font-size: 30px;
+    }
+
+    .gr-xxxlarge {
+        font-size: 34px;
     }
 }

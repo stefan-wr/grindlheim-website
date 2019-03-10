@@ -5,11 +5,6 @@
 @import "fonts";
 @import "_fontawesome/font-awesome";
 
-//Bootstrap
-//@import "_bootstrap/bootstrap";
-//@import "_bootstrap/bootstrap-grid";
-//@import "_bootstrap/bootstrap-reboot";
-
 // Site
 @import "variables";
 @import "font-sizes";
@@ -18,7 +13,7 @@
 // Layouts
 @import "footer";
 
-
 // Pages
 @import "_pages/index";
-@import "_pages/karos";
+@import "_pages/coaster-page";
+@import "post";

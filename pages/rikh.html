@@ -1,0 +1,100 @@
+---
+layout: default
+title: Ri'kh - Family Coaster
+description: Embedded into the depths of Grindlheim lies Ri'kh, a short adventure the whole family can enjoy.
+og-image: og-rikh.jpg
+permalink: /rikh/
+---
+
+<main class="center">
+    <!-- Logo section -->
+    <section class="grid-on-bg-container">
+        <!-- Background image -->
+        <div class="grid-bg-image logo-bg-blurred"
+            style="background-image:url({{site.baseurl}}/assets/img/rikh-logo-bg.jpg);background-position: 50% 40%;">
+        </div>
+        <!-- Content grid -->
+        <div class="content-grid on-bg with-gradient">
+            <!-- Back button -->
+            <div class="content-fw gr-medium back">
+                <a href="/"><i class="fa fa-angle-left"></i> Back</a>
+            </div>
+            <!-- Logo -->
+            <div class="content-nw">
+                <img class="logo" src="{{ site.baseurl }}/assets/img/rikh.svg" alt="Ri'kh">
+            </div>
+            <!-- Hero ruler top half -->
+            <div class="content-fw">
+                {% include mega-fancy-hr-split-top.html %}
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Text section with content grid -->
+    <section class="content-grid">
+        <!-- Bottom half of hero ruler -->
+        <div class="content-fw">
+            {% include mega-fancy-hr-split-bot.html %}
+        </div>
+        <!-- Introduction -->
+        <div class="content-nw center">
+            <h2 class="center gr-xxlarge bold">An adventure the whole family can enjoy</h2>
+            <p class="center gr-large">
+                Embedded into the depths of Grindlheim and entwined with its mighty brother K'aros lies Ri'kh,
+                a family coaster that everybody can enjoy. Take on this short adventure and whiz through the
+                foundations of the village and the caves that lie beneath.
+            </p>
+        </div>
+        <!-- Flipped bottom hero ruler top half -->
+        <div class="content-fw hr-flip">
+            {% include mega-fancy-hr-split-bot.html %}
+        </div>
+    </section>
+
+
+    <!-- Gallery -->
+    <section id="gallery" class="grid-on-bg-container gallery">
+        <!-- Gallery JS configuration -->
+        <script src="{{ site.baseurl }}/assets/scripts/gallery.js"></script>
+        <script>
+            var karosGallery = new Gallery('#gallery', '{{ site.baseurl }}/assets/img/rikh/rikh', '.jpg', 9, 1)
+        </script>
+        <!-- Background image -->
+        <div class="grid-bg-image gallery-img"
+            style="background-image:url({{site.baseurl}}/assets/img/rikh/rikh1.jpg);"></div>
+        <!-- Content grid -->
+        <div class="content-grid on-bg gallery-grid">
+            <!-- Hero ruler top half flipped -->
+            <div class="content-fw hr-flip">
+                {% include mega-fancy-hr-split-top.html %}
+            </div>
+            <!-- Gallery controls -->
+            <div class="content-nw align-item-top">
+                <div class="gallery-nav gr-medium">
+                    <button class="previous">
+                        <i class="fa fa-angle-left"></i>&nbsp;Previous
+                    </button>
+                    <span class="img-number">1 / 1</span>
+                    <a class="fullscreen" href="{{site.baseurl}}/assets/img/rikh/rikh1.jpg" target="blank">
+                        <i class="fa fa-arrows-alt"></i>
+                    </a>
+                    <button class="next">
+                        Next&nbsp;<i class="fa fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Loading indicator -->
+            <div class="content-nw center">
+                <div class="gallery-loading">
+                    <span class="gr-medium">Loading Image</span><br>
+                    <img src="{{ site.baseurl }}/assets/img/loading.svg">
+                </div>
+            </div>
+            <!-- Hero ruler top half -->
+            <div class="content-fw">
+                {% include mega-fancy-hr-split-top.html %}
+            </div>
+        </div>
+    </section>
+</main>

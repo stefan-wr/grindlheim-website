@@ -1,7 +1,9 @@
 ---
 layout: default
-page.title: Home
-page.description: Home
+title: Grindlheim - an Immersive Planet Coaster Theme World | Project Blog
+title-as-is: yes
+description: Experience Grindlheim, a highly detailed and immersive theme world created in Planet Coaster featuring the coasters K'aros and Ri'kh.
+og-image: og-grindlheim.jpg
 permalink: /
 ---
 
@@ -9,16 +11,16 @@ permalink: /
     <!-- Hero-image section -->
     <section class="hero">
         <!-- Background hero-image slideshow -->
-        <script src="{{ site.baseurl }}/assets/scripts/start-slideshow.js"></script>
+        <script src="{{ site.baseurl }}/assets/scripts/slideshow.js"></script>
         <ul class="hero-slideshow">
             <li>Hero Image 1</li>
             <li>Hero Image 2</li>
             <li>Hero Image 3</li>
             <li>Hero Image 4</li>
             <li>Hero Image 5</li>
-            <li style="background-image:url({{site.baseurl}}/assets/img/heros/6/hero1.jpg);">Hero Image 6</li>
+            <li style="background-image:url({{site.baseurl}}/assets/img/heros/hero1.jpg);">Hero Image 6</li>
         </ul>
-        <!-- Hero grid on top-->
+        <!-- Hero grid on top -->
         <div class="hero-grid">
             <div class="content-fw hero-border-top hr-flip">
                 {% include mega-fancy-hr-split-top.html %}
@@ -49,18 +51,17 @@ permalink: /
         <div class="content-fw">
             {% include mega-fancy-hr-split-bot.html %}
         </div>
-        <!-- Introduction-->
+        <!-- Introduction -->
         <div class="content-nw center">
             <h2 class="center gr-xxlarge bold">Welcome to the theme world of Grindlheim</h2>
             <p class="center gr-large">
-                Grindlheim is an highly detailed and immersive theme world being created in Planet&nbsp;Coaster.
-                Inspired by Klugheim at Phantasialand, Grindlheim features two rollercoasters:
-                K'aros, an intense and fast multi launch coaster with quick turn-arounds, frightening head-choppers and
-                an entwined layout
-                and Ri'kh, a family coaster which takes you on a short journey through the heart of Grindlheim.
+                Grindlheim is a highly detailed and immersive theme world being created in Planet&nbsp;Coaster by Zarroc91 / Dravarol.
+                Inspired by Klugheim at Phantasialand, Grindlheim features two rollercoasters: <b>K'aros</b>, a fast and intense
+                multi launch coaster with quick turn-arounds, frightening head-choppers and an entwined layout and <b>Ri'kh</b>,
+                a family coaster that takes you on a short journey through the heart of Grindlheim.
             </p>
         </div>
-        <!-- Audio player-->
+        <!-- Audio player -->
         <div class="content-nw center">
             <script src="{{ site.baseurl }}/assets/scripts/audio-player.js"></script>
             <div id="audio-player" onclick="playAudio()">
@@ -81,40 +82,83 @@ permalink: /
     <section class="grid-on-bg-container">
         <!-- Background image -->
         <div class="grid-bg-image blurred" style="background-image:url({{site.baseurl}}/assets/img/rikh-bg.jpg);"></div>
-        <!--- Content grid -->
+        <!-- Content grid -->
         <div class="content-grid on-bg with-gradient">
             <!-- Flipped top hero ruler bottom half -->
             <div class="content-fw hr-flip">
                 {% include mega-fancy-hr-split-top.html %}
             </div>
-
+            <!-- Coaster grid -->
             <div class="content-nw coasters-grid">
                 <div class="content-nw">
-                    <h2 class="gr-xxlarge center bold"><b>Experience the two unique rollercoasters K'aros and Ri'kh</b></h2>
+                    <h3 class="gr-xxlarge center bold txt-shadow"><b>Experience the two unique rollercoasters K'aros and
+                            Ri'kh</b></h3>
                 </div>
-
+                <!-- Title -->
                 <div class="content-nw">
                     {% include fancy-hr.html %}
                 </div>
-
+                <!-- KAROS -->
                 <div class="content-nw">
                     <a class="coaster-link" href="{{ site.baseurl }}{{ site.data.urls.karos }}">
-                        <div class="bg-image" style="background-image:url({{site.baseurl}}/assets/img/karos-logo-bg.jpg)"></div>
+                        <div class="bg-image"
+                            style="background-image:url({{site.baseurl}}/assets/img/karos-logo-bg.jpg)"></div>
                         <img class="logo" src="{{ site.baseurl }}/assets/img/karos.svg" alt="K'aros">
                     </a>
                 </div>
+                <!-- RIKH -->
                 <div class="content-nw">
-                    <a class="coaster-link" href="#">
-                        <div class="bg-image" style="background-image:url({{site.baseurl}}/assets/img/rikh-logo-bg.jpg)"></div>
+                    <a class="coaster-link" href="{{ site.baseurl }}{{ site.data.urls.rikh }}">
+                        <div class="bg-image"
+                            style="background-image:url({{site.baseurl}}/assets/img/rikh-logo-bg.jpg)"></div>
                         <img class="logo" src="{{ site.baseurl }}/assets/img/rikh.svg" alt="Ri'kh">
                     </a>
                 </div>
             </div>
-
-            <!--  Bottom hero ruler top half -->
+            <!-- Bottom hero ruler top half -->
             <div class="content-fw">
                 {% include mega-fancy-hr-split-top.html %}
             </div>
+        </div>
+    </section>
+
+    <!-- Blog section with content grid -->
+    <section id="blog" class="content-grid blog-grid">
+        <!-- Bottom half of hero ruler -->
+        <div class="content-fw">
+            {% include mega-fancy-hr-split-bot.html %}
+        </div>
+        <!-- Title -->
+        <div class="content-nw center">
+            <h2 class="center gr-xxxlarge bold">Grindlheim Project Blog</h2>
+            <span class="gr-medium date-tags">Last Update: {{ site.posts[0].date | date: "%e %B %Y" }}</span>
+        </div>
+        <!-- Ruler -->
+        <div class="content-nw">
+            {% include fancy-hr.html %}
+        </div>
+        <!-- Project status -->
+        <div class="content-nw gr-medium center status">
+            <p>Project Progress:</p>
+            <div class="progress-bar">
+                <span class="right">&nbsp;</span><span class="left">~ 50%</span>
+            </div>
+        </div>
+        <!-- List of posts -->
+        {% for post in site.posts %}
+            <a class="content-nw post" href="{{ post.url }}">
+                <h3 class="gr-large bold">#{{ post.index }} - {{ post.title }}</h3>
+                <span class="gr-small date-tags">{{ post.date | date: "%e %B %Y" }} &nbsp;|&nbsp; Tags: </span>
+                {% for tag in post.tags %}
+                    <span class="gr-small date-tags">
+                        {{ tag }}{% if forloop.last == false %}, {% endif %}</span>
+                {% endfor %}
+                <p class="gr-medium">{{ post.excerpt }}</p>
+            </a>
+        {% endfor %}
+        <!-- Flipped bottom hero ruler top half -->
+        <div class="content-fw">
+            {% include mega-fancy-hr-split-top.html %}
         </div>
     </section>
 </main>

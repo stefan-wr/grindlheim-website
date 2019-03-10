@@ -1,54 +1,81 @@
 ---
 layout: default
-page.title: Home
-page.description: Home
+title: K'aros - Multi Launch Coaster
+description: Experience pure speed as this multi launch coaster inspired by Taron rushes over the roofs and through the caves of Grindlheim.
+og-image: og-karos.jpg
 permalink: /karos/
 ---
 
 <main class="center">
+    <!-- Logo section -->
     <section class="grid-on-bg-container">
         <!-- Background image -->
         <div class="grid-bg-image logo-bg-blurred"
             style="background-image:url({{site.baseurl}}/assets/img/karos-logo-bg.jpg);background-position: 50% 0%;">
         </div>
-        <!--- Content grid -->
+        <!-- Content grid -->
         <div class="content-grid on-bg with-gradient">
             <!-- Back button -->
             <div class="content-fw gr-medium back">
-                <a class="tag-medium" href="/"><i class="fa fa-angle-left"></i> Back</a>
+                <a href="/"><i class="fa fa-angle-left"></i> Back</a>
             </div>
-
             <!-- Logo -->
             <div class="content-nw">
                 <img class="logo" src="{{ site.baseurl }}/assets/img/karos.svg" alt="K'aros">
             </div>
-
-            <!-- Hero ruler bottom half flipped -->
-            <div class="content-fw hr-flip">
-                {% include mega-fancy-hr-split-bot.html %}
+            <!-- Hero ruler top half -->
+            <div class="content-fw">
+                {% include mega-fancy-hr-split-top.html %}
             </div>
         </div>
     </section>
 
 
-    <section id="gallery" class="grid-on-bg-container gallery">
-        <!-- Gallery JS configuration-->
-        <script src="{{ site.baseurl }}/assets/scripts/galleryclass.js"></script>
-        <script>
-            var karosGallery = new Gallery('#gallery', '{{ site.baseurl }}/assets/img/heros/6/hero', '.jpg', 6, 1)
-        </script>
+    <!-- Text section with content grid -->
+    <section class="content-grid">
+        <!-- Bottom half of hero ruler -->
+        <div class="content-fw">
+            {% include mega-fancy-hr-split-bot.html %}
+        </div>
+        <!-- Introduction -->
+        <div class="content-nw center">
+            <h2 class="center gr-xxlarge bold">K'aros, a one-of-a-kind experience</h2>
+            <p class="center gr-large">
+                Take a ride on K'aros and experience pure speed as this mighty beast rushes over the roofs
+                and through the cliffs and caves of Grindlheim. Two powerful launches send its brave riders through the
+                extremely entwined track layout reaching up to the highest peak of Grindlheim. K'aros is fast,
+                it fears you with its near misses and throws you around as it quickly changes direction.
+                A one-of-o-kind experience embedded in an incredible theme world.
+            </p>
+            <div class="content-nw">
+                {% include fancy-hr.html %}
+            </div>
+            <ul class="gr-large">
+            </ul>
+        </div>
+        <!-- Flipped bottom hero ruler top half -->
+        <div class="content-fw hr-flip">
+            {% include mega-fancy-hr-split-bot.html %}
+        </div>
+    </section>
 
+
+    <!-- Gallery -->
+    <section id="gallery" class="grid-on-bg-container gallery">
+        <!-- Gallery JS configuration -->
+        <script src="{{ site.baseurl }}/assets/scripts/gallery.js"></script>
+        <script>
+            var karosGallery = new Gallery('#gallery', '{{ site.baseurl }}/assets/img/karos/karos', '.jpg', 12, 1)
+        </script>
         <!-- Background image -->
         <div class="grid-bg-image gallery-img"
-            style="background-image:url({{site.baseurl}}/assets/img/heros/6/hero1.jpg);"></div>
-
-        <!--- Content grid -->
+            style="background-image:url({{site.baseurl}}/assets/img/karos/karos1.jpg);"></div>
+        <!-- Content grid -->
         <div class="content-grid on-bg gallery-grid">
             <!-- Hero ruler top half flipped -->
             <div class="content-fw hr-flip">
                 {% include mega-fancy-hr-split-top.html %}
             </div>
-
             <!-- Gallery controls -->
             <div class="content-nw align-item-top">
                 <div class="gallery-nav gr-medium">
@@ -56,7 +83,7 @@ permalink: /karos/
                         <i class="fa fa-angle-left"></i>&nbsp;Previous
                     </button>
                     <span class="img-number">1 / 1</span>
-                    <a class="fullscreen" href="{{site.baseurl}}/assets/img/heros/6/hero1.jpg" target="blank">
+                    <a class="fullscreen" href="{{site.baseurl}}/assets/img/karos/karos1.jpg" target="blank">
                         <i class="fa fa-arrows-alt"></i>
                     </a>
                     <button class="next">
@@ -64,7 +91,6 @@ permalink: /karos/
                     </button>
                 </div>
             </div>
-
             <!-- Loading indicator -->
             <div class="content-nw center">
                 <div class="gallery-loading">
@@ -72,7 +98,6 @@ permalink: /karos/
                     <img src="{{ site.baseurl }}/assets/img/loading.svg">
                 </div>
             </div>
-
             <!-- Hero ruler top half -->
             <div class="content-fw">
                 {% include mega-fancy-hr-split-top.html %}

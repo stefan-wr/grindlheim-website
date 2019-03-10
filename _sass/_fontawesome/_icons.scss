@@ -1,6 +1,7 @@
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
 
+.#{$fa-css-prefix}-angle-up:before { content: $fa-var-angle-up; }
 .#{$fa-css-prefix}-angle-down:before { content: $fa-var-angle-down; }
 .#{$fa-css-prefix}-angle-left:before { content: $fa-var-angle-left; }
 .#{$fa-css-prefix}-angle-right:before { content: $fa-var-angle-right; }
@@ -13,6 +14,8 @@
 .#{$fa-css-prefix}-circle:before { content: $fa-var-circle; }
 .#{$fa-css-prefix}-circle-thin:before { content: $fa-var-circle-thin; }
 .#{$fa-css-prefix}-arrows-alt:before { content: $fa-var-arrows-alt; }
+.#{$fa-css-prefix}-eye:before { content: $fa-var-eye; }
+.#{$fa-css-prefix}-eye-slash:before { content: $fa-var-eye-slash; }
 
 /*
 .#{$fa-css-prefix}-glass:before { content: $fa-var-glass; }

@@ -1,0 +1,16 @@
+---
+layout: default
+permalink: /posts/
+---
+
+<main>
+    {% for post in site.posts %}
+        <section class="content-grid">
+            <a class="content-nw" href="{{ post.url }}">
+                <h2>#{{ post.index }} - {{ post.title }}</h2>
+                <h3>{{ post.date | date: "%e %B %Y" }}</h3>
+                <p>{{ post.excerpt }}</p>
+            </a>
+        </section>
+    {% endfor %}
+</main>
