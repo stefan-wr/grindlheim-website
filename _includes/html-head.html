@@ -7,7 +7,11 @@
 
 <!-- Title and Description -->
 <title>{{ page.title }}{% unless page.title-as-is %} | {{ site.title }}{% if page.layout == 'post' %} Blog{% endif %}{% endunless %}</title>
-<meta name="description" content="{{ page.description }}">
+{% if page.layout == 'post'%}
+    <meta name="description" content="{{ page.excerpt }}">
+{% else %}
+    <meta name="description" content="{{ page.description }}">
+{% endif %}
 
 <!-- Stylesheet -->
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/styles/styles.css">

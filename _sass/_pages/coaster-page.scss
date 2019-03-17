@@ -11,3 +11,29 @@
 .logo-bg-blurred {
     filter: grayscale(15%) brightness(110%) contrast(85%) blur(5px);
 }
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: top;
+    justify-items: center;
+    margin-top: 29px;
+
+    .stat-name {
+        color: $gr-color-txt-hover;
+    }
+
+    @media screen and (max-width: $gr-break-l) {
+        margin-top: 25px;
+    }
+
+    @media screen and (max-width: $gr-break-m) {
+        grid-template-columns: 1fr;
+        margin-top: 21px;
+
+        .stat-pair-margin {
+            margin-bottom: 0.7em;
+        }
+    }
+}

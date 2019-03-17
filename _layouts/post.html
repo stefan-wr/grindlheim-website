@@ -27,8 +27,21 @@ layout: compress
                 <!-- Post title -->
                 <div class="content-nw post-title txt-shadow">
                     <h1 class="gr-xxxlarge bold">{{ page.title }}</h1>
-                    <span class="gr-large">Update #{{ page.index }} &nbsp;-&nbsp;
-                        {{ page.date | date: "%m/%d/%Y" }}</span>
+                    <span class="gr-large">
+                        Update #{{ page.index }} &nbsp;-&nbsp;
+                        {{ page.date | date: "%m/%d/%Y" }}
+                    </span>
+                    {% if page.reddit or page.planco-forum %}
+                        <br>
+                        <span class="gr-small links">
+                            {% if page.reddit %}
+                                <a href="{{ page.reddit }}">Reddit</a>
+                            {% endif%}
+                            {% if page.planco-forum %}
+                                <a href="{{ page.planco-forum }}">Planet Coaster Forums</a>
+                            {% endif %}
+                        </span>
+                    {% endif %}
                 </div>
                 <!-- Hero ruler top half -->
                 <div class="content-fw">
@@ -39,19 +52,15 @@ layout: compress
 
 
         <!-- Text section with content grid -->
-        <section class="content-grid">
+        <section class="content-grid post">
             <!-- Bottom half of hero ruler -->
             <div class="content-fw">
                 {% include mega-fancy-hr-split-bot.html %}
             </div>
-
             <!-- Post Content -->
-            <div class="content-nw">
-                <p class="gr-large">
-                    {{ content }}
-                </p>
+            <div class="content-nw left">
+                {{ content }}
             </div>
-
             <!-- Flipped bottom hero ruler top half -->
             <div class="content-fw hr-flip">
                 {% include mega-fancy-hr-split-bot.html %}
@@ -64,7 +73,7 @@ layout: compress
             <!-- Gallery JS configuration -->
             <script src="{{ site.baseurl }}/assets/scripts/gallery.js"></script>
             <script>
-                var gallery = new Gallery('#gallery', '{{ site.baseurl }}/assets/posts/{{ page.index }}/p{{ page.index }}-', '.jpg', {{ page.number-of-images }}, 1, [{%for txt in page.image-descriptions %}'{{txt}}'{% if forloop.last == false %},{%endif%}{%endfor%}]);
+                var gallery = new Gallery('#gallery', '{{ site.baseurl }}/assets/posts/{{ page.index }}/p{{ page.index }}-', '.jpg', {{ page.number-of-images }}, 1, [{%for txt in page.image-descriptions %}"{{txt}}"{% if forloop.last == false %},{%endif%}{%endfor%}]);
             </script>
             <!-- Background image -->
             <div class="grid-bg-image gallery-img"
@@ -104,7 +113,6 @@ layout: compress
                 <!-- Text -->
                 <div class="content-nw">
                     <p class="gr-medium center gallery-txt">
-                            
                     </p>
                 </div>
                 <!-- Hero ruler top half -->

@@ -3,6 +3,7 @@ title: Grindlheim
 email: contact@grindlheim.com
 baseurl: ""
 url: "http://www.grindlheim.com"
+progress: 40%
 
 # Build options
 future: true
@@ -27,3 +28,4 @@ exclude:
   - Gemfile.lock
   - vs-code-arbeitsbereich.code-workspace
   - README.md
+  - "*.psd"
