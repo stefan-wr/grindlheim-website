@@ -17,8 +17,9 @@ compress_html:
   ignore:
     envs: []
 
-#plugins:
-#  - jekyll-feed
+plugins:
+  - jekyll-sitemap
+  #- jekyll-feed
 
 sass:
   style: compressed
