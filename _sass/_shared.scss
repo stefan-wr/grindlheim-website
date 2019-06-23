@@ -271,7 +271,8 @@ button {
         float: right;
         background-color: $gr-color-background-light;
         
-        $progress: 56%;
+        // $progress = 100 - progress + 1
+        $progress: 41%;
         width: $progress;
 
         animation: breathing 4s infinite;
