@@ -30,3 +30,4 @@ exclude:
   - vs-code-arbeitsbereich.code-workspace
   - README.md
   - "*.psd"
+  - "*.py"
