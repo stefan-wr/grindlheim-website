@@ -35,4 +35,20 @@
     a {
         text-decoration: underline;
     }
+
+    .video-wrapper {
+        overflow: hidden;
+    }
+
+    .video-wrapper, video {
+        border-radius: 24px;
+    
+        @media screen and (max-width: $gr-break-l) {
+            border-radius: 20px;
+        }  
+    
+        @media screen and (max-width: $gr-break-m) {
+            border-radius: 16px;
+        }
+    }
 }

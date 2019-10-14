@@ -14,7 +14,7 @@ post_id = input("Post ID:")
 n_imgs = input("Anzahl Bilder:")
 
 result = ""
-for i in range(1, n_imgs):
+for i in range(1, n_imgs + 1):
     result += ('\n\n[img]' + post_path + str(post_id) + '/p' + str(post_id) + '-' + str(i) + '.jpg' + '[/img]' + '\n')
 myprint(result)
 
