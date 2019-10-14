@@ -163,6 +163,37 @@ $hero-height: 100vh;
 }
 
 
+//Blog & Coaster Block Shared
+%abs-position {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-image {
+    @extend %abs-position;
+    z-index: -3;
+    transition: $gr-transition-speed;
+    
+    background-size: cover;
+    background-repeat: none;
+    background-position: 50% 0%;
+
+    &::before {
+        @extend %abs-position;
+        z-index: -2;
+        content: "";
+    }
+
+    &::before {
+        @extend %abs-position;
+        z-index: -1;
+        content: "";
+    }
+}
+
 // Coaster Block
 .coasters-grid {
     display: grid;
@@ -191,11 +222,8 @@ $hero-height: 100vh;
     display: grid;
     align-items: center;
     justify-items: center;
-    position: relative;
-    z-index: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     transition: $gr-transition-speed ease-in-out;
 
     --border-radius: 1000px;
@@ -205,6 +233,10 @@ $hero-height: 100vh;
         --border-radius: 24px;
     }
 
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+
     &:hover {
         box-shadow: 0px 5px 10px $gr-color-box-shadow-darker;
 
@@ -213,37 +245,18 @@ $hero-height: 100vh;
         }
     }
 
-    %abs-position {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        border-radius: var(--border-radius);
-    }
-
     .bg-image {
-        @extend %abs-position;
-        z-index: -3;
-        transition: $gr-transition-speed;
+        border-radius: var(--border-radius);
         filter: blur(1px) grayscale(10%) contrast(95%);
-        
-        background-size: cover;
-        background-repeat: none;
-        background-position: 50% 0%;
 
         &::before {
-            @extend %abs-position;
-            z-index: -2;
+            border-radius: var(--border-radius);
             background-image: linear-gradient(to right, rgba(0,0,0,0) 20%, rgba(0,0,0,0.45) 38%, rgba(0,0,0,0.45) 62%, rgba(0,0,0,0) 80%);
-            content: "";
         }
 
         &::before {
-            @extend %abs-position;
-            z-index: -1;
+            border-radius: var(--border-radius);
             box-shadow: inset 0px 0px 24px  black;
-            content: "";
         }
     }
 
@@ -262,6 +275,7 @@ $hero-height: 100vh;
     }
 }
 
+// Blog Block
 .blog-grid {
     grid-row-gap: 30px;
 
@@ -290,8 +304,8 @@ $hero-height: 100vh;
         box-shadow: inset 0px 0px 4px black;
         padding: 8px 30px;
         border-radius: 28px;
-        //border: 2px solid white;
-        
+        transition: linear $gr-transition-speed;
+
         @media screen and (max-width: $gr-break-l) {
             padding: 6px 25px;
             border-radius: 23px;
@@ -300,6 +314,29 @@ $hero-height: 100vh;
         @media screen and (max-width: $gr-break-m) {
             padding: 2px 17px;
             border-radius: 18px;
+        }
+
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+
+        &:hover {
+            text-shadow: 0px 0px 6px rgba(0,0,0,0.8);
+            .bg-image {
+                filter: grayscale(15%) brightness(110%) contrast(90%) blur(0px);
+            }
+        }
+        
+        .bg-image {
+            filter: blur(5px) grayscale(30%) contrast(90%);
+    
+            &::before {
+                background-image: linear-gradient(to right, rgba(15, 15, 15, 0.65) 0%, rgba(0,0,0,0.65) 100%);
+            }
+    
+            &::before {
+                box-shadow: inset 0px 0px 12px  black;
+            }
         }
     }
 }
