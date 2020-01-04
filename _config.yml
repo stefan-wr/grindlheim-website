@@ -23,6 +23,7 @@ plugins:
 
 sass:
   style: compressed
+  sourcemap: never
 
 exclude:
   - Gemfile
