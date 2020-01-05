@@ -6,6 +6,7 @@ class Gallery {
         this.nImgs = nImgs;
         this.imgTxts = imgTxts
         this.current = current;
+        this.currentTxt = undefined
         this.txtVisible = true
         this.imgLoaded = true
         bindGalleryId(this)
@@ -33,7 +34,7 @@ class Gallery {
             this.gallery.imgLoaded = true;
             $(this.gallery.id + ' .gallery-loading').fadeOut();
             $(this.gallery.id + ' .gallery-img').fadeIn();
-            if (this.gallery.txtVisible) {
+            if (this.gallery.txtVisible && this.gallery.currentTxt) {
                 $(this.gallery.id + ' .gallery-txt').fadeIn().css('display', 'inline-block');;
             }
         };
@@ -48,15 +49,16 @@ class Gallery {
     }
 
     setImage(next) {
-        var url = this.getImgUrl(next);
-        this.loadImage(url);
+        var url = this.getImgUrl(next);                     // Get URL
+        this.currentTxt = this.imgTxts[this.current - 1]    // Get text for image
+        this.loadImage(url);                                // Load image
         $(this.id + ' .gallery-txt').hide();
         $(this.id + ' .gallery-img').hide();
         $(this.id + ' .gallery-img').css('background-image', 'url(' + url + ')');
         $(this.id + ' .fullscreen').attr('href', url);
         $(this.id + ' .img-number').text(this.current + ' / ' + this.nImgs);
         if (this.imgTxts != []) {
-            $(this.id + ' .gallery-txt').text(this.imgTxts[this.current - 1])
+            $(this.id + ' .gallery-txt').text(this.currentTxt)
         }
     }
 
@@ -82,8 +84,8 @@ class Gallery {
         } else {
             // Show text
             this.txtVisible = true
-            // Only show if image is loaded, otherwise loadImage will show the text.
-            if (this.imgLoaded) {
+            // Only show if image is loaded and text is not undefined, otherwise loadImage will show the text.
+            if (this.imgLoaded && this.currentTxt) {
                 $(this.id + ' .gallery-txt').fadeIn().css('display', 'inline-block');;
             }
             $(this.id + ' .toggle-txt i').addClass('fa-eye-slash');
