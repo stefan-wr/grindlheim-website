@@ -17,6 +17,7 @@ $hero-height: 100vh;
 
         .hero-title {
             grid-row: 3;
+            user-select: none;
             
             h1 {            
                 display: inline-block;
