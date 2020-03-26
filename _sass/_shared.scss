@@ -285,7 +285,8 @@ video {
         background-color: $gr-color-background-light;
         
         // $progress = 100 - progress + 1
-        $progress: 31%;
+        $progress: 90%;
+        $progress: 100% - $progress + 1;
         width: $progress;
 
         animation: breathing 4s infinite;

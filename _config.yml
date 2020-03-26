@@ -3,7 +3,7 @@ title: Grindlheim
 email: contact@grindlheim.com
 baseurl: ""
 url: "http://www.grindlheim.com"
-progress: 70%
+progress: 90%
 
 # Build options
 future: true
@@ -32,3 +32,4 @@ exclude:
   - README.md
   - "*.psd"
   - "*.py"
+  - "*.afphoto"
