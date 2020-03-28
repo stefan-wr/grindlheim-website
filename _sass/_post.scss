@@ -77,12 +77,21 @@
     .img-wrap {
         height: 100%;
         width: 100%;
+        overflow: hidden;
 
         img {
             height: 100%;
             object-fit: cover;
             border-radius: 0px;
-            transition: $gr-transition-speed;
+            transition:
+                opacity $gr-transition-speed ease-in-out,
+                transform $gr-transition-speed*2 ease-in-out;
+        }
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.05);
         }
     }
 }
