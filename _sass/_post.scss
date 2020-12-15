@@ -35,9 +35,10 @@
         text-decoration: underline;
     }
 
-    .img-link, img {
+    .img-link, .img-link > img {
         width: 100%;
         display: block;
+        cursor: zoom-in;
     }
 
     .video-wrapper, .workshop-link, .img-link {
@@ -45,7 +46,7 @@
         box-shadow: 0px 0px 12px $gr-color-box-shadow-darkest;
     }
 
-    .video-wrapper, video, .workshop-link, img, .img-link {
+    .video-wrapper, video, .workshop-link, .img-link {
         border-radius: 24px;
     
         @media screen and (max-width: $gr-break-l) {
@@ -67,8 +68,7 @@
 
     &:hover {
         img {
-            cursor: zoom-in;
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
     }
 }
@@ -84,6 +84,9 @@
     border: 0px solid white;
     padding-right: 1em;
     margin: 2em 0px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     
 
     @media screen and (max-width: $gr-break-m) {
@@ -96,6 +99,8 @@
         overflow: hidden;
 
         img {
+            display: block;
+            width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 0px;
@@ -107,7 +112,7 @@
 
     &:hover {
         img {
-            transform: scale(1.05);
+            transform: scale(1.07);
         }
     }
 }

@@ -2,8 +2,8 @@
 title: Grindlheim
 email: contact@grindlheim.com
 baseurl: ""
-url: "http://www.grindlheim.com"
-progress: 90%
+url: "https://www.grindlheim.com"
+progress: 100%
 
 # Build options
 future: true
@@ -31,5 +31,6 @@ exclude:
   - vs-code-arbeitsbereich.code-workspace
   - README.md
   - "*.psd"
+  - "*.afphoto"
   - "*.py"
   - "*.afphoto"

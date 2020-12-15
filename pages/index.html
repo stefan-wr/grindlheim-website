@@ -26,7 +26,10 @@ permalink: /
                 {% include mega-fancy-hr-split-top.html %}
             </div>
             <div class="content-nw hero-title center">
-                <h1 class="metamorph">Grindlheim</h1>
+                <div class="title-wrap">
+                    <h1 class="metamorph">Grindlheim</h1>
+                    <span class="metamorph">Now released!</span>
+                </div>
             </div>
             <div class="content-nw loading center">
                 <span class="gr-medium">Loading Slideshow</span><br>
@@ -54,18 +57,20 @@ permalink: /
         <!-- Introduction -->
         <div class="content-nw center">
             <h2 class="center gr-xxlarge bold">Welcome to the theme world of Grindlheim</h2>
-            <p class="center gr-large">
-                Grindlheim is a highly detailed and immersive theme world being created in Planet&nbsp;Coaster by Zarroc91 / Dravarol.
+            <p class="center gr-medium">
+                Grindlheim is a highly detailed and immersive theme world created in Planet&nbsp;Coaster by Zarroc91 / Dravarol.
                 Inspired by Klugheim at Phantasialand, Grindlheim features two rollercoasters: K'aros, a fast and intense
                 multi launch coaster with quick turn-arounds, frightening head-choppers and an entwined layout and Ri'kh,
                 a family coaster that takes you on a short journey through the heart of Grindlheim.
+                During the four years Grindlheim was in the making, more than 900 hours have been spent into the project.
+                Grindlheim in its final form exists of 100.000 individually placed objects.
             </p>
         </div>
         <!-- Audio player -->
         <div class="content-nw center">
             <script src="{{ site.baseurl }}/assets/scripts/audio-player.js"></script>
             <div id="audio-player" onclick="playAudio()">
-                <span class="gr-large">&nbsp;Music&nbsp;&nbsp;<i class="fa fa-volume-off"></i>&nbsp;</span>
+                <span class="gr-medium">&nbsp;Music&nbsp;&nbsp;<i class="fa fa-volume-off"></i>&nbsp;</span>
                 <audio id="audio">
                     <source src="{{ site.baseurl }}/assets/audio/grindlheim.mp3" type="audio/mp3">
                 </audio>
@@ -78,7 +83,188 @@ permalink: /
     </section>
 
 
-    <!-- Karos coaster section with content grid -->
+    <!-- Video section with background image -->
+    <section class="grid-on-bg-container">
+        <!-- Background image -->
+        <div class="grid-bg-image blurred" style="background-image:url({{site.baseurl}}/assets/img/video-bg.jpg);"></div>
+        <!-- Content grid -->
+        <div class="content-grid on-bg with-gradient">
+            <div class="content-fw hr-flip">
+                {% include mega-fancy-hr-split-top.html %}
+            </div>
+            <!-- Showcase Video -->
+            <div class="content-nw center">
+                <h3 class="center gr-xxlarge bold txt-shadow">Watch the showcase video on Youtube</h3>
+                <p class="center gr-medium txt-shadow">
+                    The easiest way to experience Grindlheim is by watching the 8 minute long showcase video.
+                    Just click on the image below to start your tour through Grindlheim.
+                </p>
+                <p>
+                    <a id="yt-link"class="center a-hover-opacity img-link gr-xxlarge" target="_blank" rel="noopener noreferrer" href="{{ site.baseurl }}{{ site.data.urls.showcase-video }}">
+                        <img src="{{ site.baseurl }}/assets/img/yt-thumbnail.jpg" alt="Grindlheim Showcase Video Thumbnail with Youtube Logo">
+                    </a>
+                </p>
+            </div>
+            <!-- Bottom hero ruler top half -->
+            <div class="content-fw">
+                {% include mega-fancy-hr-split-top.html %}
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Download section with content grid -->
+    <section class="content-grid">
+        <!-- Bottom half of hero ruler -->
+        <div class="content-fw">
+            {% include mega-fancy-hr-split-bot.html %}
+        </div>
+        <!-- Download Links -->
+        <div class="content-nw center">
+            <h3 class="center gr-xxlarge bold">Download Grindlheim from the Workshop</h3>
+            <p class="center gr-medium">
+                The best way to experience Grindlheim is to download it from the Steam Workshop and explore
+                every corner of it first hand on your PC. Planet Coaster DLCs or Toolkit items are not required,
+                but downloading the custom music and media files is a must for the most immersive experience!
+            </p>
+            <!-- Park Download Link -->
+            <a class="workshop-link gr-medium a-hover-opacity button left" href="{{ site.baseurl }}{{ site.data.urls.workshop-park }}">
+                <div class="img-wrap">
+                    <img src="{{ site.baseurl_root }}/assets/img/gr-park-workshop.jpg" alt="Grindlheim Steam Workshop Cover">
+                </div>
+                <div>
+                    <p>
+                        <span class="bold">Grindlheim Theme World</span><br>
+                        <span class="gr-small">
+                            Click here to download the Grindlheim park from the Steam Workshop and experience it first hand!              
+                        </span>
+                    </p>
+                </div>
+            </a>
+            <!-- Collection Download Link -->
+            <a class="workshop-link gr-medium a-hover-opacity button left" href="{{ site.baseurl }}{{ site.data.urls.workshop-collection }}">
+                <div class="img-wrap">
+                    <img src="{{ site.baseurl_root }}/assets/img/gr-collection-workshop.jpg" alt="Grindlheim Collection Cover">
+                </div>
+                <div>
+                    <p>
+                        <span class="bold">Grindlheim Collection</span><br>
+                        <span class="gr-small">
+                            Complete buildings and useful decorative objects from Grindlheim. Get it from the Steam Workshop!            
+                        </span>
+                    </p>
+                </div>
+            </a>
+        </div>
+        <!-- Flipped bottom hero ruler top half -->
+        <div class="content-fw hr-flip">
+            {% include mega-fancy-hr-split-bot.html %}
+        </div>
+    </section>
+
+
+    <!-- INDEX Gallery -->
+    <section id="gallery" class="grid-on-bg-container gallery center">
+        <!-- Gallery JS configuration -->
+        <script src="{{ site.baseurl }}/assets/scripts/gallery.js"></script>
+        <script>
+            var karosGallery = new Gallery('#gallery', '{{ site.baseurl }}/assets/img/index/index', '.jpg', 14, 1)
+        </script>
+        <!-- Background image -->
+        <div class="grid-bg-image gallery-img"
+            style="background-image:url({{site.baseurl}}/assets/img/index/index1.jpg);"></div>
+        <!-- Content grid -->
+        <div class="content-grid on-bg gallery-grid">
+            <!-- Hero ruler top half flipped -->
+            <div class="content-fw hr-flip">
+                {% include mega-fancy-hr-split-top.html %}
+            </div>
+            <!-- Gallery controls -->
+            <div class="content-nw align-item-top">
+                <div class="gallery-nav gr-medium">
+                    <button class="previous">
+                        <i class="fa fa-angle-left"></i>&nbsp;Previous
+                    </button>
+                    <span class="img-number">1 / 1</span>
+                    <a class="fullscreen" href="{{site.baseurl}}/assets/img/karos/karos1.jpg" target="blank">
+                        <i class="fa fa-arrows-alt"></i>
+                    </a>
+                    <button class="next">
+                        Next&nbsp;<i class="fa fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Loading indicator -->
+            <div class="content-nw center">
+                <div class="gallery-loading">
+                    <span class="gr-medium">Loading Image</span><br>
+                    <img src="{{ site.baseurl }}/assets/img/loading.svg">
+                </div>
+            </div>
+            <!-- Hero ruler top half -->
+            <div class="content-fw">
+                {% include mega-fancy-hr-split-top.html %}
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Soundtrack section with content grid -->
+    <section class="content-grid">
+        <!-- Bottom half of hero ruler -->
+        <div class="content-fw">
+            {% include mega-fancy-hr-split-bot.html %}
+        </div>
+        <!-- Soundtrack -->
+        <div class="content-nw center">
+            <h3 class="center gr-xxlarge bold">Listen to the Grindlheim soundtrack</h3>
+            <p class="center gr-medium">
+                A unique theme world requires a custom soundtrack. Especially for Grindlheim, two original songs,
+                an environmental and an onride track for the main coaster K'aros, were composed and produced.
+                Three additional tracks, adaptations of songs by the amazing
+                <a class="underline" href="{{ site.baseurl }}{{ site.data.urls.vindsvept }}">Vindsvept</a>,
+                complete the soundtrack.
+            </p>
+            <p class="center gr-medium bold" style="max-width:800px;margin:auto">
+                All songs are licensed under
+                <a class="underline" href="{{ site.baseurl }}{{ site.data.urls.cc }}">CC BY 4.0</a>
+                and can be adapted and shared in any medium or format free of charge!
+            </p>
+            <!-- Soundcloud Link -->
+            <a class="workshop-link gr-medium a-hover-opacity button left" href="{{ site.baseurl }}{{ site.data.urls.ost-soundcloud }}">
+                <div class="img-wrap">
+                    <img src="{{ site.baseurl_root }}/assets/img/ost-cover-sc.png" alt="Grindlheim OST Cover with Soundcloud logo">
+                </div>
+                <div>
+                    <p>
+                        <span class="bold">Listen on SoundCloud</span><br>
+                        <span class="gr-small">
+                            Click here to listen or download the complete Grindlheim soundtrack on SoundCloud!              
+                        </span>
+                    </p>
+                </div>
+            </a>
+            <!-- ZIP Download -->        
+            <a class="workshop-link gr-medium a-hover-opacity button left" href="{{ site.baseurl }}assets/audio/GrindlheimOST.zip">
+                <div class="img-wrap">
+                    <img src="{{ site.baseurl_root }}/assets/img/ost-cover-zip.png" alt="Grindlheim OST Cover with ZIP file symbol">
+                </div>
+                <div>
+                    <p>
+                        <span class="bold">Download MP3 ZIP file</span><br>
+                        <span class="gr-small">Click here to download the complete Grindlheim soundtrack as 320&nbsp;kbit/s MP3!</span>
+                    </p>
+                </div>
+            </a>
+        </div>
+        <!-- Flipped bottom hero ruler top half -->
+        <div class="content-fw hr-flip">
+            {% include mega-fancy-hr-split-bot.html %}
+        </div>
+    </section>    
+
+
+    <!-- Coaster section with content grid -->
     <section class="grid-on-bg-container">
         <!-- Background image -->
         <div class="grid-bg-image blurred" style="background-image:url({{site.baseurl}}/assets/img/rikh-bg.jpg);"></div>
@@ -91,8 +277,7 @@ permalink: /
             <!-- Coaster grid -->
             <div class="content-nw coasters-grid">
                 <div class="content-nw">
-                    <h3 class="gr-xxlarge center bold txt-shadow"><b>Experience the two unique rollercoasters K'aros and
-                            Ri'kh</b></h3>
+                    <h3 class="gr-xxlarge center bold txt-shadow">Experience the two unique rollercoasters K'aros and Ri'kh</h3>
                 </div>
                 <!-- Title -->
                 <div class="content-nw">
@@ -142,7 +327,7 @@ permalink: /
         <div class="content-nw gr-medium center status">
             <p>Project Progress:</p>
             <div class="progress-bar">
-                <span class="right">&nbsp;</span><span class="left">~ {{ site.progress }}</span>
+                <span class="right">&nbsp;</span><span class="left">{{ site.progress }}</span>
             </div>
         </div>
         <!-- List of posts -->

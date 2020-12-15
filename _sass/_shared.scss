@@ -71,12 +71,15 @@ button {
     text-shadow: 0px 3px 6px rgba(0,0,0,0.2)
 }
 
+.underline {
+    text-decoration: underline;
+}
+
 video {
     display: block;
     width: 100%;
     height: 100%;
     outline: none;
-    
 }
 
 
@@ -278,6 +281,7 @@ video {
         font-weight: 700;
         color: $gr-color-background-light;
         padding-right: 1em;
+        border-radius: 100px;
     }
 
     .right {
@@ -285,7 +289,7 @@ video {
         background-color: $gr-color-background-light;
         
         // $progress = 100 - progress + 1
-        $progress: 90%;
+        $progress: 99%;
         $progress: 100% - $progress + 1;
         width: $progress;
 
