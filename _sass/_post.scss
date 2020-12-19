@@ -91,6 +91,7 @@
 
     @media screen and (max-width: $gr-break-m) {
         grid-template-columns: 2fr 2fr;
+        column-gap: 1em;
     }
 
     .img-wrap {
