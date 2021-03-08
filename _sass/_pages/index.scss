@@ -39,6 +39,9 @@ $hero-height: 100vh;
                     border-radius: 1000px;
                     box-shadow: 0px 0.1em 0.2em rgba(0,0,0,0.6);
 
+                    -webkit-backdrop-filter: blur(4px);
+                    backdrop-filter: blur(4px);
+
                     @media screen and (max-width: $gr-break-m) {
                         border-width: 2px;
                     }
@@ -53,6 +56,9 @@ $hero-height: 100vh;
                     border: 0.1em solid white;
                     border-radius: 0 0 1000px 1000px;
                     box-shadow: 0px 0.3em 0.6em rgba(0,0,0,0.5);
+
+                    -webkit-backdrop-filter: blur(4px);
+                    backdrop-filter: blur(4px);
 
                     transform: translateY(-0.1em);
 

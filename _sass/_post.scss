@@ -87,11 +87,16 @@
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    
+   
 
     @media screen and (max-width: $gr-break-m) {
         grid-template-columns: 2fr 2fr;
         column-gap: 1em;
+
+        span.gr-small {
+            display: inline-block;
+            line-height: 1.7em;
+        }
     }
 
     .img-wrap {
