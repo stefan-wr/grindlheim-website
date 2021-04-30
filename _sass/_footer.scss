@@ -58,7 +58,7 @@ footer {
                 transition: linear $gr-transition-speed;
             }
 
-            &:hover {
+            &:hover, &:focus-within {
                 img {
                     opacity: 0.5;
                 }

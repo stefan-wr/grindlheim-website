@@ -185,7 +185,7 @@ $hero-height: 100vh;
         transition: $gr-transition-speed ease-in;
     }
 
-    &:hover{
+    &:hover, &:focus-within{
         span {
             background: $gr-color-txt;
             color: black;
@@ -209,7 +209,7 @@ $hero-height: 100vh;
         z-index: 0;
     }
 
-    &:hover {
+    &:hover, &:focus-within {
         box-shadow: 0px 5px 10px $gr-color-box-shadow-darker;
         opacity: 1;
         filter: grayscale(15%) brightness(110%) contrast(90%) blur(0px);
@@ -316,7 +316,7 @@ $hero-height: 100vh;
     z-index: 0;
     overflow: hidden;
 
-    &:hover {
+    &:hover, &:focus-within {
         box-shadow: 0px 5px 10px $gr-color-box-shadow-darker;
 
         .bg-image {
@@ -401,7 +401,7 @@ $hero-height: 100vh;
         z-index: 0;
         overflow: hidden;
 
-        &:hover {
+        &:hover, &:focus-within {
             text-shadow: 1px 1px 6px rgba(0,0,0,0.9);
             .bg-image {
                 filter: grayscale(15%) brightness(110%) contrast(90%) blur(0px);

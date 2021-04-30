@@ -69,7 +69,7 @@ permalink: /
         <!-- Audio player -->
         <div class="content-nw center">
             <script src="{{ site.baseurl }}/assets/scripts/audio-player.js"></script>
-            <div id="audio-player" onclick="playAudio()">
+            <div id="audio-player" onclick="playAudio()" onkeypress="playAudio()" tabindex="0">
                 <span class="gr-medium">&nbsp;Music&nbsp;&nbsp;<i class="fa fa-volume-off"></i>&nbsp;</span>
                 <audio id="audio">
                     <source src="{{ site.baseurl }}/assets/audio/grindlheim.mp3" type="audio/mp3">

@@ -20,7 +20,7 @@
             transition: $gr-transition-speed ease-in;
             opacity: 0.5;
     
-            &:hover{
+            &:hover, &:focus-within {
                 opacity: 1;
                 background: $gr-color-txt;
                 color: black;
@@ -66,7 +66,7 @@
         transform $gr-transition-speed*2 ease-in-out;
     }
 
-    &:hover {
+    &:hover, &:focus-within {
         img {
             transform: scale(1.03);
         }
@@ -116,7 +116,7 @@
         }
     }
 
-    &:hover {
+    &:hover, &:focus-within {
         img {
             transform: scale(1.07);
         }
@@ -148,7 +148,7 @@
         text-decoration: none;
         opacity: 0.5;
 
-        &:hover{
+        &:hover, &:focus-within {
             color: white;
             opacity: 1;
         }
